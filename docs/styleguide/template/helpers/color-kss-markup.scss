@@ -1,0 +1,31 @@
+@import '../../../../scss/settings/colors';
+
+// Build the markup needed for the color section of the KSS style guide.
+@function color-kss-markup() {
+  $markup: '';
+
+  @each $color-key, $color-variants in $colors {
+    //$base-color-value: map-get($color-variants, 'base');
+    $markup: $markup + '<div class="kss-colors">';
+
+    @each $variant-name, $variant-value in $color-variants {
+      $markup: $markup
+        + '<div class="kss-color"><div class="kss-color__swatch" style="background: #{$variant-value};"></div>'
+        + '<code class="kss-color__code">#{$variant-value}</code><br/>'
+        + '<code class="kss-color__desc">#{$color-key} #{$variant-name}</code></div>';
+    }
+
+    $markup: $markup + '</div>';
+  }
+
+  // Wrap
+  $markup: '<div class="kss__style">' + $markup + '</div>';
+  $markup: '<!-- This markup is auto-generated from Sass with color-kss-markup(). Do not modify. -->' + $markup;
+
+  @return $markup;
+}
+
+// scss-lint:disable Comment
+/*
+#{color-kss-markup()}
+*/

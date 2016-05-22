@@ -1,0 +1,22 @@
+<fieldset class="c-fieldset {{modifier_class}}">
+  <legend><span class="c-fieldset__legend">A fieldset</span></legend>
+  <div class="c-fieldset__description">Fieldset description</div>
+  <div class="c-form__item">
+    <label class="c-form__label" for="fieldsetText">Text input</label>
+    <input class="c-form__text" type="text" id="fieldsetText" placeholder="Text input">
+  </div>
+</fieldset>
+
+<fieldset class="c-fieldset {{modifier_class}}" disabled>
+  <legend><span class="c-fieldset__legend">A disabled fieldset</span></legend>
+  <div class="c-form__item">
+    <label class="c-form__label" for="fieldsetText2">Disabled text input</label>
+    <input class="c-form__text" type="text" id="fieldsetText2" placeholder="Disabled input">
+  </div>
+  <div class="c-form__item">
+    <label class="c-form__label" for="fieldsetSelect">Disabled select menu</label>
+    <select class="c-form__select" id="fieldsetSelect">
+      <option>Disabled select</option>
+    </select>
+  </div>
+</fieldset>

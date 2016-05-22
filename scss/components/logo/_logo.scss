@@ -1,0 +1,17 @@
+// Logo
+//
+// Style guide: logo
+.c-logo {
+  margin-top: 1.2em;
+  float: left;
+
+  @include respond-to('xlarge') {
+    margin-right: 10%;
+  }
+
+  @include respond-to('xsmall-xlarge') {
+    max-width: pxtoem(42);
+    margin-bottom: 0.8em;
+    margin-top: 0.8em;
+  }
+}

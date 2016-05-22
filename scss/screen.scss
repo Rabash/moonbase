@@ -1,0 +1,64 @@
+// Architecture
+//
+// The CSS architecture is based on [Inverted Triangle CSS](http://www.creativebloq.com/web-design/manage-large-scale-web-projects-new-css-architecture-itcss-41514731)
+// by [Harry Roberts](https://twitter.com/csswizardry/).
+// It is layer-based architecture that goes from generic css to explicit,
+// low specificity to high specificity.
+
+// Settings
+//
+// This holds all global settings that need to be accessed from anywhere.
+// Examples of settings: font-families, color palettes, configurations.
+@import 'settings/global';
+@import 'settings/breakpoints';
+@import 'settings/colors';
+@import 'settings/fonts';
+@import 'settings/grid';
+@import 'settings/z-layers';
+
+// Tools
+//
+// Tools are globally available tools like mixins and functions.
+// Tools that does not need accessing globally belongs in
+// the partial to which it relates.
+// Examples of tools: font-sizing mixins, breakpoint mixins.
+@import 'tools/functions';
+@import 'tools/mixins';
+@import 'tools/helpers';
+
+// Generic
+//
+// This is the first layer that actually produces css.
+// Here you can find very high-level, far reaching styles.
+// This layer is rarely modified and you' won't find any classes here.
+// Examples: resets, sanitize.
+@import 'generic/*';
+
+// Elements
+//
+// These are bare, unclassed HTML elements,
+// slightly more specific than the generic layer.
+// What does a blockquote look like without classes?
+// This is the last layer you'll find bare, element-based selectors.
+// Examples: h1, blockquote, ul, image.
+@import 'elements/*';
+
+// Objects
+//
+// This is the first layer in which we find class-based selectors.
+// These are concerned with styling non-cosmetic design patterns, or ‘objects’.
+// Examples: wrappers, grids.
+@import 'objects/*';
+
+// Components
+//
+// This layers holds the cosmetic design patterns. This is where most of the
+// work will happen.
+// Examples: icons, menus, pagination.
+@import 'components/**/*';
+
+// Trumps
+//
+// This layers beats all other layers.
+// It contains utility and helper classes, hacks and overrides.
+@import 'trumps/*';

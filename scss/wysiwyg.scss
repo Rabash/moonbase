@@ -1,0 +1,20 @@
+// Settings
+@import 'settings/global';
+@import 'settings/breakpoints';
+@import 'settings/colors';
+@import 'settings/fonts';
+@import 'settings/grid';
+@import 'settings/z-layers';
+
+// Tools
+@import 'tools/functions';
+@import 'tools/mixins';
+@import 'tools/helpers';
+
+@import 'components/text/text';
+
+// scss-lint:disable all
+body#tinymce.wp-editor {
+  @extend .c-body;
+  margin: 2em;
+}

@@ -1,0 +1,29 @@
+// Wrapper
+//
+// En wrapper sätts som det yttersta elementet av en layout och sätter sidans bredd.
+// <br><em>(class: o-wrapper)</em>
+//
+// Markup:
+// <div class="o-wrapper kss-wrapper">.o-wrapper</div>
+//
+// Style guide: wrappers
+.o-wrapper {
+  @extend %clearfix;
+  box-sizing: content-box;
+  max-width: pxtoem(1280);
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  padding-right: 5%;
+  padding-left: 5%;
+
+  @include respond-to('medium') {
+    padding-right: 3%;
+    padding-left: 3%;
+  }
+
+  @include respond-to('xxxlarge') {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

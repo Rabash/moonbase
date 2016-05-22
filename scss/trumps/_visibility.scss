@@ -1,0 +1,25 @@
+// Visibility
+//
+// Invisible element as defined by [Jonathan Snook](http://snook.ca/archives/html_and_css/hiding-content-for-accessibility)
+//
+// Markup:
+// <h2 href="#" class="u-visually-hidden">Invisible heading</h2>
+// <h2 href="#" class="u-visually-hidden u-focusable">Invisible but focusable heading</h2>
+//
+// Style guide: visibility
+.u-visually-hidden {
+  @extend %visually-hidden;
+}
+
+.u-focusable {
+  @extend %visually-hidden;
+
+  &:active,
+  &:focus {
+    position: static;
+    clip: auto;
+    height: auto;
+    width: auto;
+    overflow: auto;
+  }
+}

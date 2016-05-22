@@ -1,0 +1,148 @@
+// Text
+//
+// Style guide: text
+
+
+// Body text
+//
+// Markup:
+// <div class="c-body">
+//   <p class="c-preamble">Urabitur arcu erat, <a href="#">accumsan id imperdiet</a> et,
+//   porttitor at sem. Quisque velit nisi, pretium
+//   ut lacinia in, elementum id enim.</p>
+//   <h2>H2 heading neque</h2>
+//   <p>Puctor sit amet aliquam vel, ullamcorper
+//   sit amet ligula. <a href="#">en länk i text</a> in ipsum id
+//   orci porta dapibus. Ut lacinia in, elementum id enim.</p>
+//   <h3>H3 heading neque</h3>
+//   <p>Curabitur arcu erat, <a href="#">en länk i text</a> et,
+//   porttitor at sem. Quisque velit nisi, pretium
+//   ut lacinia in, elementum id enim.</p>
+//   <blockquote>
+//    <p>Puctor sit amet aliquam vel, ullamcorper
+//    sit amet ligula. Pellentesque in ipsum id
+//    orci porta dapibus.</p>
+//   </blockquote>
+//   <p>Ductor sit am, ullamcorper in ipsum
+//   sit amet ligula. Pellentesque id
+//   orci porta dapibus.</p>
+//   <ul>
+//     <li>Unordered list item 1</li>
+//     <li>Unordered list item 2</li>
+//     <li>Unordered list item 3</li>
+//   </ul>
+//   <ol>
+//     <li>Ordered list item 1</li>
+//     <li>Ordered list item 2</li>
+//     <li>Ordered list item 3</li>
+//   </ol>
+// </div>
+//
+// Style guide: text.body
+.c-body {
+  font-size: pxtoem(14);
+  line-height: pxtoem(24,14);
+  max-width: pxtoem(640,16);
+  margin: 0;
+
+  @include respond-to('large') {
+    font-size: pxtoem(16);
+  }
+
+  &__preamble {
+    font-size: 1.2em;
+  }
+
+  img,
+  .c-media {
+    display: block;
+    margin: 0 0 1.5em;
+  }
+
+  video,
+  object,
+  iframe {
+    max-width: 100%;
+    margin: 0 0 1.5em;
+  }
+
+  a {
+    @include transition;
+    color: color('black');
+    border-bottom: solid 0.1em color('pink');
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      border-bottom: solid 0.2em color('pink');
+    }
+  }
+
+  ul,
+  ol {
+    padding-left: 3em;
+    margin-top: 0;
+    margin-bottom: 1.6em;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  li {
+    padding-left: 0.3em;
+  }
+
+  table {
+    margin-bottom: 1.6em;
+  }
+
+  h2 {
+    font-size: pxtoem(18,14);
+    line-height: pxtoem(26,18);
+    font-weight: bold;
+    margin: 1.6em 0 0.4em;
+
+    @include respond-to('large') {
+      font-size: pxtoem(24);
+    }
+  }
+
+  p {
+    margin: 0 0 1em;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  blockquote {
+    position: relative;
+    font-size: pxtoem(24,14);
+    line-height: pxtoem(28,24);
+    font-family: $veneer;
+    text-align: center;
+    color: color('grey', 'darker');
+    margin: 3em 0.5em 1.5em;
+
+    @include respond-to('large') {
+      font-size: pxtoem(30);
+    }
+
+    &::before {
+      position: absolute;
+      content: '”';
+      font-size: 3.5em;
+      line-height: 1em;
+      color: color('blue');
+      top: -0.5em;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  *:first-child {
+    margin-top: 0;
+  }
+}

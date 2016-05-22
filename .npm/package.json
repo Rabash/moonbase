@@ -1,0 +1,40 @@
+{
+  "name": "Moonbase",
+  "version": "0.0.0",
+  "description": "The node.js requirements to build this project.",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "cheerio": "^0.20.0",
+    "del": "^2.0.2",
+    "g": "^2.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cheerio": "^0.6.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-group-css-media-queries": "^1.1.0",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-load-plugins": "^1.2.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^2.3.1",
+    "gulp-sass-glob": "^1.0.6",
+    "gulp-scss-lint": "0.3.9",
+    "gulp-size": "^2.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-svgstore": "^6.0.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp-util": "^3.0.7",
+    "imagemin-pngquant": "^5.0.0",
+    "kss": "^3.0.0-beta.12",
+    "sassdoc": "^2.1.20"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

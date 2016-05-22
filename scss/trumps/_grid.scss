@@ -1,0 +1,101 @@
+/* Helper to see utility-classes /*
+/*[class^="u-"],
+[class*=" u-"] {
+  outline: 5px solid cyan;
+}*/
+
+// scss-lint:disable ImportantRule
+@include respond-to('medium') {
+  .u-left\@medium {
+    float: left;
+  }
+}
+
+@include respond-to('medium-large') {
+
+  .u-last\@medium-large {
+    margin-right: 0 !important;
+  }
+
+  .u-left\@medium-large {
+    float: left;
+  }
+}
+
+@include respond-to('medium-xlarge') {
+
+  .u-left\@medium-xlarge {
+    float: left;
+  }
+
+  .u-last\@medium-xlarge {
+    margin-right: 0 !important;
+  }
+}
+
+@include respond-to('large') {
+  .u-left\@large {
+    float: left;
+  }
+
+  .u-right\@large {
+    float: right;
+  }
+
+  .u-last\@large {
+    margin-right: 0 !important;
+  }
+
+  .u-center\@large {
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+}
+
+@include respond-to('xlarge') {
+  .u-left\@xlarge {
+    float: left;
+  }
+
+  .u-right\@xlarge {
+    float: right;
+  }
+
+  .u-last\@xlarge {
+    margin-right: 0;
+    clear: right;
+  }
+}
+
+.u-full {
+  clear: both;
+  overflow: hidden;
+}
+
+.u-center-align {
+  text-align: center;
+}
+
+.u-center {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.u-center-vertical {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.u-clearfix {
+  @include clearfix;
+}
+
+.u-relative {
+  position: relative;
+}
+
+.u-first {
+  clear: left;
+}
+// scss-lint:enable ImportantRule

@@ -1,0 +1,10 @@
+/// Root font size defaults to 16.
+/// @requires {function} pxtoem
+/// @requires {function} remcalc
+/// @requires {mixin} rem
+$root-font-size:    16;
+$root-line-height:  1.6;
+
+$root-radius:       3px;
+
+$root-spacing-unit: $root-line-height;

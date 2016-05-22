@@ -1,0 +1,29 @@
+/// Font size in em.
+/// @param {Number} $target-px - The font-size in pixels you want
+/// @param {Number} $context [$root-font-size] - The font-size of the context you are in
+@function pxtoem($target-px, $context: $root-font-size) {
+  @return $target-px / $context * 1em;
+}
+
+/// Map of breakpoints for responsive design.
+/// @prop {Map} small [(max-width: 360px)]
+/// @prop {Map} medium [(min-width: 550px)]
+/// @prop {Map} large [(min-width: 768px)]
+/// @prop {Map} xlarge [(min-width: 1024px)]
+/// @prop {Map} xxlarge [(min-width: 1240px)]
+/// @see {mixin} respond-to
+/// @type Map
+$breakpoints: (
+  'small': (min-width: pxtoem(360)),
+  'medium': (min-width: pxtoem(550)),
+  'large': (min-width: pxtoem(768)),
+  'xlarge': (min-width: pxtoem(1024)),
+  'xxlarge': (min-width: pxtoem(1240)),
+  'xxxlarge': (min-width: pxtoem(1350)),
+  'medium-large': '(min-width: #{pxtoem(550,16)}) and (max-width: #{pxtoem(767,16)})',
+  'medium-xlarge': '(min-width: #{pxtoem(550,16)}) and (max-width: #{pxtoem(1023,16)})',
+  'large-xlarge': '(min-width: #{pxtoem(768,16)}) and (max-width: #{pxtoem(1023,16)})',
+  'xsmall-medium': (max-width: pxtoem(549)),
+  'xsmall-large': (max-width: pxtoem(767)),
+  'xsmall-xlarge': (max-width: pxtoem(1023)),
+);

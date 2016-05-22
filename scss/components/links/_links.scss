@@ -1,0 +1,29 @@
+.c-skip-link {
+  background: color('black');
+  color: color('white');
+  text-align: center;
+  padding: 1.5em 0;
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
+
+  &:focus {
+    color: color('white');
+  }
+}
+
+.c-bookmark {
+  text-decoration: none;
+  color: color('grey', 'dark');
+  font-weight: normal;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+
+    img {
+      opacity: 0.9;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+// Färger
+//
+// Här är alla färger som används på webbplatsen.
+//
+// Markup: color-kss-markup.twig
+//
+// Weight: -1
+//
+// Style guide: colors
+
+/// Map of colors.
+/// @see {function} color
+/// @type Map
+$colors: (
+  'black': (
+    base: #1e1e1e
+  ),
+  'white': (
+    base: #fdfdfd
+  ),
+  'pink': (
+    base: #e0119d,
+    dark: #b8007c
+  ),
+  'grey': (
+    lightest: #f6f6f6,
+    lighter: #ebebeb,
+    light: #d8d8d8,
+    base: #cbcbcb,
+    dark: #9b9b9b,
+    darker: #575757
+  ),
+  'purple': (
+    base: #80379b
+  ),
+  'blue': (
+    base: #00b9e4
+  ),
+  'red': (
+    base: #e00034,
+  ),
+  'green': (
+    base: #bed600
+  )
+);

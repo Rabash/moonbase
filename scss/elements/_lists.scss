@@ -1,0 +1,11 @@
+ul {
+  list-style: disc outside;
+}
+
+li > {
+  ul,
+  ol {
+    margin-left: 1.2 * $root-spacing-unit;
+    margin-bottom: 0;
+  }
+}

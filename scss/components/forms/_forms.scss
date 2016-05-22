@@ -1,0 +1,362 @@
+// Forms
+//
+// Different parts of forms.
+//
+// Style guide: forms
+
+// Form item
+//
+// Wrapper for a form element (or group of form elements) and its label.
+//
+// .-error  - Highlight the form elements that caused a form submission error.
+//
+// Markup: form-item.twig
+//
+// Style guide: forms.form-item
+.c-form__item {
+  margin-bottom: 1.5em;
+
+  &.-checkbox,
+  &.-radio {
+    margin-bottom: 0.2em;
+  }
+}
+
+// Label
+//
+// The `<label>` element represents a caption of a form field. The label can be
+// associated with a specific form control by using the `for` attribute or by
+// putting the form control inside the label element itself.
+//
+// Markup: forms-label.twig
+//
+// Style guide: forms.labels
+.c-form__label {
+  cursor: pointer;
+  display: block;
+  font-weight: bold;
+  font-size: pxtoem(16);
+  margin-bottom: pxtoem(5,16);
+
+  @include respond-to('large') {
+    font-size: pxtoem(18);
+    margin-bottom: pxtoem(20,18);
+  }
+
+  &.-option {
+    font-weight: normal;
+    display: inline-block;
+    margin: 0;
+  }
+}
+
+.c-form__required {
+  color: color('pink');
+  font-weight: bold;
+}
+
+// Description
+//
+// Descriptions are sometimes needed as a complement to the label.
+//
+// Markup: forms-description.twig
+//
+// Style guide: forms.description
+.c-form__description {
+  font-size: pxtoem(13);
+  color: color('black');
+  display: block;
+}
+
+// Text inputs
+//
+// The `<input>` element is mostly used for text-based inputs that include the
+// HTML5 types: `text`, `search`, `tel`, `url`, `email`, `password`, `date`,
+// `time`, `number`, `range`, `color`, and `file`.
+//
+// :disabled  - Disabled
+// .-error    - Error
+// .-success  - Success
+//
+// Markup: forms-input.twig
+//
+// Style guide: forms.text
+
+// Textarea
+//
+// The `<textarea>` element represents a multi-line plain text form field.
+//
+// :disabled  - Disabled
+// .-error    - Error
+// .-success  - Success
+//
+// Markup: forms-textarea.twig
+//
+// Style guide: forms.textarea
+%form--element,
+.c-form__text,
+.c-form__textarea {
+  @include transition;
+  font-size: pxtoem(16);
+  padding: 1em 1em 0.5em;
+  background-color: color('white');
+  border-radius: pxtoem(5);
+  border: 1px solid ('black');
+  box-shadow: inset 0 1px 0 0 color('grey'), 0 0 0 1px color('grey');
+  width: 100%;
+  max-width: 35em;
+
+  &:hover,
+  &:focus,
+  &.pseudo-class-focus,
+  &:active {
+    box-shadow: inset 0 2px 0 0 color('grey'), 0 0 0 1px color('grey', 'dark');
+  }
+
+  &.-error {
+    border-color: color('red');
+  }
+
+  &.-success {
+    border-color: color('green');
+  }
+
+  // TODO: Hannah has cool script for this that needs javascript rewriting.
+  &.-file {
+
+  }
+
+  &:disabled,
+  &.pseudo-class-disabled {
+    background-color: color('grey', 'light');
+    box-shadow: 0 0 0 1px color('grey');
+    cursor: not-allowed;
+  }
+}
+
+// Select list
+//
+// The `<select>` element represents a form field for selecting amongst a set of
+// options.
+//
+// Known limitation: by default, Chrome and Safari on OS X allow very limited
+// styling of `<select>`, unless a `border` property is set.
+//
+// :disabled  - Disabled
+// .-error    - Error
+// .-success  - Success
+//
+// Markup: forms-select.twig
+//
+// Style guide: forms.select
+.c-form__select {
+  @extend %form--element;
+  cursor: pointer;
+  background-image: url('../images/svg/icon--arrows--dropdown.svg');
+  background-size: pxtoem(9) pxtoem(23);
+  background-position: right 1.3rem center;
+  background-repeat: no-repeat;
+  width: 100%;
+  max-width: 35em;
+
+  &:disabled,
+  &.pseudo-class-disabled {
+    background-image: url('../images/svg/icon--arrows--dropdown--disabled.svg');
+    color: color('grey', 'light');
+    background-color: color('grey', 'lighter');
+    box-shadow: 0 0 0 0 color('grey', 'lighter');
+    top: 0;
+    cursor: not-allowed;
+  }
+}
+
+// Checkboxes
+//
+// If an `<input>` element has the `type='checkbox'` attribute set, the form
+// field is displayed as a checkbox.
+//
+// It's recommended that you don't attempt to style these elements. Firefox's
+// implementation doesn't respect `box-sizing`, `padding`, or `width`.
+//
+// Markup: forms-checkbox.twig
+//
+// Style guide: forms.checkboxes
+
+// Radio buttons
+//
+// If an `<input>` element has the `type='radio'` attribute set, the form field
+// is displayed as a radio button.
+//
+// Markup: forms-radio.twig
+//
+// Style guide: forms.radios
+.c-form__checkboxes,
+.c-form__radios {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+// scss-lint:disable QualifyingElement
+.c-form__checkbox,
+.c-form__radio {
+  @extend %visually-hidden;
+
+  + .c-form__label {
+
+    &::before {
+      background: white;
+      content: '\a0';
+      display: inline-block;
+      line-height: 0.8;
+      margin-right: 0.6em;
+      text-indent: 0.15em;
+      vertical-align: 0.2em;
+    }
+  }
+
+  &:disabled + .c-form__label::before {
+    background: color('grey');
+    box-shadow: 0 0 0 1px color('grey');
+    cursor: not-allowed;
+  }
+}
+
+.c-form__radio {
+  + .c-form__label {
+    cursor: pointer;
+    border: 2px solid color('blue');
+    line-height: 1.2;
+    padding: 0.7em 0.7em 0.7em 0.9em;
+    color: color('blue');
+    font-weight: 500;
+    background: color('white');
+
+    &::before {
+      background: color('white');
+      border-radius: 100%;
+      box-shadow: 0 0 0 4px color('white'), 0 0 0 6px color('blue');
+      content: '\a0';
+      display: inline-block;
+      line-height: 0.2;
+      margin-right: 0.8em;
+      text-indent: 0.15em;
+      vertical-align: 0.2em;
+      height: 0.7em;
+      width: 0.7em;
+      border-radius: 100%;
+    }
+  }
+
+  &:checked + .c-form__label {
+    background: color('blue');
+    color: color('white');
+
+    &::before {
+      background: color('white');
+      box-shadow: 0 0 0 4px color('blue'), 0 0 0 6px color('white');
+    }
+  }
+
+  &.is-tabbed,
+  &:focus,
+  &:active {
+    + .c-form__label {
+      box-shadow: 0 0 3px color('black'), 0 0 7px color('black');
+    }
+  }
+}
+
+.c-form__checkbox {
+  + .c-form__label {
+    position: relative;
+    margin-left: 2px;
+
+    &::before {
+      box-shadow: 0 0 0 2px color('black', 'tint');
+      color: color('blue');
+      vertical-align: middle;
+      height: 0.9em;
+      width: 0.9em;
+      font-size: 1.5em;
+    }
+  }
+
+  &:checked + .c-form__label {
+    &::before {
+      background-image: url('../images/svg/icon--check.svg');
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-color: color('blue');
+      box-shadow: 0 0 0 2px color('blue');
+    }
+  }
+
+  &:disabled + .c-form__label {
+    color: #5b616b;
+  }
+
+  &.is-tabbed,
+  &:focus,
+  &:active {
+    + .c-form__label::before {
+      box-shadow: 0 0 0 2px color('blue'), 0 0 10px color('black');
+    }
+  }
+}
+// scss-lint:enable QualifyingElement
+
+// Error messages
+//
+// Markup: forms-error.twig
+//
+// Style guide: forms.errors
+.c-form__error {
+  color: color('red');
+  font-weight: bold;
+  font-size: pxtoem(13);
+}
+
+.c-list--naked {
+  list-style: none;
+}
+
+// Fieldsets
+//
+// The `<fieldset>` element groups a set of form fields, optionally under a
+// common name given by the `<legend>` element.
+//
+// Markup: forms-fieldset.twig
+//
+// Style guide: forms.fieldset
+.c-fieldset {
+  @extend %clearfix;
+  padding: 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border-bottom: 1px solid color('grey');
+  position: relative;
+
+  .c-form__fieldset {
+    padding-top: 2em;
+    border-bottom: 0;
+    border-top: 1px solid color('grey');
+  }
+}
+
+.c-fieldset__legend {
+  @extend %heading-c;
+  text-align: center;
+  display: block;
+  margin-bottom: 0.8em;
+}
+
+.c-fieldset__description {
+  text-align: center;
+  max-width: 35em;
+  margin: 0 auto 2.2em;
+
+  a {
+    text-decoration: underline;
+  }
+}

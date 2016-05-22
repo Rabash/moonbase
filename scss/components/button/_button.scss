@@ -1,0 +1,82 @@
+// Buttons
+//
+// In addition to the `<button>` and
+// `<input type="submit|image|reset|button">` elements, the `.c-button` class and
+// its variants can apply buttons styles to various elements (like an `<a>`
+// link).
+//
+// :disabled  - Disabled
+//
+// Style guide: button
+%button {
+  text-decoration: none;
+  font-size: pxtoem(18);
+  padding: 0.5em 0.8em 0.2em;
+  font-weight: bold;
+  border: 0;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+
+  &[disabled],
+  &.pseudo-class-disabled {
+    background: color('grey');
+    cursor: default;
+    top: 0;
+    box-shadow: none;
+  }
+}
+
+// Primary button
+//
+// Primary buttons are for primary actions.
+//
+// Markup: button.twig
+//
+// Style guide: button.primary
+.c-button {
+  @extend %button;
+  border-radius: pxtoem(5);
+  background-color: color('pink');
+  color: color('white');
+  box-shadow: 0 3px 0 0 color('pink', 'dark');
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    box-shadow: 0 2px 0 0 color('pink', 'dark');
+    top: 1px;
+  }
+
+  &:active {
+    box-shadow: 0 0 0 0 color('pink', 'dark');
+    top: 2px;
+  }
+}
+
+// Secondary button
+//
+// Secondary buttons are for secondary actions.
+//
+// Markup: button.twig
+//
+// Style guide: button.secondary
+.c-button-secondary {
+  @extend %button;
+  border-radius: pxtoem(5);
+  background-color: color('pink');
+  color: color('white');
+  box-shadow: 0 3px 0 0 color('pink', 'dark');
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    box-shadow: 0 2px 0 0 color('pink', 'dark');
+    top: 1px;
+  }
+
+  &:active {
+    box-shadow: 0 0 0 0 color('pink', 'dark');
+    top: 2px;
+  }
+}

@@ -1,0 +1,76 @@
+.c-heading {
+  color: color('black');
+  word-wrap: break-word;
+
+  a {
+    color: color('black');
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: underline;
+    }
+  }
+
+  .c-bookmark:hover &,
+  .c-bookmark:focus &,
+  .c-bookmark:active & {
+    text-decoration: underline;
+  }
+}
+
+// Headings
+//
+// Here is the site's headline sizes in different varieties.
+// Sizes run in an alphabetical order, not to be confused
+// with html-headings such as h1, h2 and so on.
+//
+// .-center    - Centered
+// .-line      - Line
+// .-white     - White
+//
+// Markup:
+// <h1 class="c-heading -a {{modifier_class}}">Heading level A</h1>
+// <h2 class="c-heading -b {{modifier_class}}">Heading level B</h2>
+// <h3 class="c-heading -c {{modifier_class}}">Heading level C</h3>
+// <h3 class="c-heading -d {{modifier_class}}">Heading level D</h3>
+// <h3 class="c-heading -e {{modifier_class}}">Heading level E</h3>
+//
+// Style guide: headings
+%heading-a,
+.c-heading.-a {
+  font-weight: normal;
+  font-size: pxtoem(40);
+  line-height: pxtoem(40,40);
+  margin: 0.3em 0 0.6em;
+
+  @include respond-to('large') {
+    font-size: pxtoem(75);
+  }
+}
+
+%heading-b,
+.c-heading.-b {
+  font-weight: normal;
+  font-size: pxtoem(30);
+  line-height: pxtoem(34,30);
+  margin: 0 0 0.6em;
+
+  @include respond-to('large') {
+    font-size: pxtoem(40);
+  }
+}
+
+%heading-c,
+.c-heading.-c {
+  font-weight: bold;
+  font-size: pxtoem(18);
+  line-height: pxtoem(24,18);
+  margin: 0 0 0.6em;
+
+  @include respond-to('large') {
+    font-size: pxtoem(24);
+    font-size: pxtoem(30,24);
+  }
+}

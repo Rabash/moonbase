@@ -1,0 +1,43 @@
+// Kolumner
+//
+// Ramverket för webbplatser är baserad på 12 kolumner.
+// <br><em>(category: grid)</em>
+//
+// Markup:
+// <div class="o-wrapper kss-wrapper">
+//  <div class="o-row kss-row">
+//    <div class="o-8-12@large u-left@large kss-grid">.o-8-12 .u-left</div>
+//    <div class="o-4-12@large u-left@large u-last@large kss-grid">.o-4-12 .u-left .u-last</div>
+//  </div>
+//  <div class="o-row kss-row">
+//    <div class="o-4-12@large u-left@large kss-grid">.o-4-12 .u-left</div>
+//    <div class="o-4-12@large u-left@large kss-grid">.o-4-12 .u-left</div>
+//    <div class="o-4-12@large u-left@large kss-grid">.o-4-12 .u-left .u-last</div>
+//  </div>
+//  <div class="o-row kss-row">
+//    <div class="o-6-12@large u-left@large kss-grid">.o-6-12 .u-left</div>
+//    <div class="o-6-12@large u-left@large kss-grid">.o-6-12 .u-left .u-last</div>
+//  </div>
+// </div>
+//
+// Style guide: grid
+
+[class^="o-"],
+[class*=" o-"] {
+  box-sizing: content-box;
+  //outline: 1px solid cyan;
+}
+
+@include grid-breakpoint('medium', 2);
+@include grid-breakpoint('medium-large', 2);
+@include grid-breakpoint('medium-xlarge', 2);
+@include grid-breakpoint('large', 12);
+@include grid-breakpoint('xlarge', 12);
+@include grid-breakpoint('xxlarge', 12);
+
+@include respond-to('xxlarge') {
+
+  .o-1-left\@xxlarge {
+    margin-left: grid(12) + grid(12, 'gutter');
+  }
+}

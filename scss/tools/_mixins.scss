@@ -1,0 +1,154 @@
+/// Mixin to size elements.
+/// @param {Number} $width           - Width
+/// @param {Number} $height [$width] - Height
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+/// Mixin to set font-size.
+/// @param {Number} $font-size          - Font-size without unit
+/// @param {Number} $line-height [auto] - Line-height without unit
+@mixin font-size($font-size, $line-height: auto) {
+  font-size: pxtoem($font-size);
+
+  @if $line-height == auto {
+    line-height: ceil($font-size / $root-line-height) * ($root-line-height / $font-size);
+  } @else {
+
+    @if (type-of($line-height) == number or $line-height == inherit or $line-height == normal) {
+      line-height: $line-height;
+    } @elseif ($line-height != none and $line-height != false) {
+      @warn "D’oh! ‘#{$line-height}’ is not a valid value for `line-height`."
+    }
+
+  }
+
+}
+
+/// Shorthand for positioning.
+/// @access private
+/// @param {String} $position - Position type (either `absolute`, `fixed` or `relative`)
+/// @param {Length} $top [null] - Top offset
+/// @param {Length} $right [null] - Right offset
+/// @param {Length} $bottom [null] - Bottom offset
+/// @param {Length} $left [null] - Left offset
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+
+/// Shorthand for absolute positioning.
+/// @requires {mixin} position
+/// @param {Arglist} $args - Offsets
+/// @example scss - Stretch an item over its parent.
+///  @include absolute($top: 0, $right: 0, $bottom: 0, $left: 0)
+@mixin absolute($args...) {
+  @include position(absolute, $args...);
+}
+
+
+/// Shorthand for relative positioning.
+/// @requires {mixin} position
+/// @param {Arglist} $args - Offsets
+@mixin relative($args...) {
+  @include position(relative, $args...);
+}
+
+
+/// Shorthand for fixed positioning.
+/// @requires {mixin} position
+/// @param {Arglist} $args - Offsets
+@mixin fixed($args...) {
+  @include position(fixed, $args...);
+}
+
+
+/// Responsive manager.
+/// @requires {variable} breakpoints
+/// @param {String} $breakpoint - Breakpoint
+/// @throws No value found for `$breakpoint`. Please make sure it is defined in `$breakpoints` map.
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '
+         + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}
+
+/// Shorthand for transitions.
+/// @param {String} $transition-property [all] - The transition you want
+/// @param {String} $transition-time [0.4s] - The length of the transition in seconds
+/// @param {String} $method [ease-in-out] - Transition method
+@mixin transition($transition-property: all, $transition-time: 0.1s, $method: ease-in-out) {
+  transition: $transition-property $transition-time $method;
+}
+
+/// Shorthand for grid calculation.
+/// @param {Number} $columns - The number of columns to span over.
+/// @param {Number} $grid-columns - The total number of columns the grid have.
+@mixin grid($columns, $grid-columns) {
+  margin-right: grid($grid-columns, 'gutter');
+  width: (grid($grid-columns) * $columns) + (grid($grid-columns, 'gutter') * ($columns - 1));
+}
+
+/// Shorthand for all grid sizes.
+/// @param {String} $breakpoint - At what breakpoint is this mixin used?
+/// @param {Number} $grid-columns - how many cols does this grid have?
+@mixin grid-breakpoint($breakpoint, $grid-columns) {
+  @include respond-to($breakpoint) {
+
+    @for $i from 1 through $grid-columns {
+      .o-#{$i}-#{$grid-columns}\@#{$breakpoint} {
+        @include grid($i,$grid-columns);
+
+        // If divided by 2, remove margin from 2nd child
+        @if $grid-columns/$i == 2 {
+          &:nth-child(2n) {
+            margin-right: 0;
+          }
+
+          &:nth-child(2n+1) {
+            clear: left;
+          }
+        }
+
+        // If divided by 3, remove margin from 3rd child
+        @if $grid-columns/$i == 3 {
+          &:nth-child(3n) {
+            margin-right: 0;
+          }
+
+          &:nth-child(3n+1) {
+            clear: left;
+          }
+        }
+
+        // If divided by 4, remove margin from 4rd child
+        @if $grid-columns/$i == 4 {
+          &:nth-child(4n) {
+            margin-right: 0;
+          }
+
+          &:nth-child(4n+1) {
+            clear: left;
+          }
+        }
+
+        // If divided by itself equals 1, remove margin from last child on row
+        @if $grid-columns/$i == 1 {
+          &:nth-child(#{$i}n) {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}

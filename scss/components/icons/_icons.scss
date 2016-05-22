@@ -1,0 +1,71 @@
+.c-icon--menu {
+  float: right;
+  margin-left: 0.7em;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: pxtoem(24);
+  height: pxtoem(24);
+
+  &__inner {
+    display: block;
+    position: absolute;
+    top: pxtoem(11);
+    left: 0;
+    right: 0;
+    height: pxtoem(3);
+    background: color('grey', 'darker');
+    /* autoprefixer: off */
+    transition: background 0s 0.15s;
+
+    &::before,
+    &::after {
+      position: absolute;
+      display: block;
+      left: 0;
+      width: 100%;
+      height: pxtoem(3);
+      background-color: color('grey', 'darker');
+      content: '';
+      /* autoprefixer: off */
+      transition-duration: 0.15s, 0.15s;
+      transition-delay: 0.15s, 0s;
+    }
+
+    &::before {
+      top: pxtoem(-7);
+      /* autoprefixer: off */
+      transition-property: top, transform;
+    }
+
+    &::after {
+      bottom: pxtoem(-7);
+      /* autoprefixer: off */
+      transition-property: bottom, transform;
+    }
+  }
+
+  // scss-lint:disable NestingDepth
+  .js-nav-active & {
+    &__inner {
+      background: transparent;
+
+      &::before,
+      &::after {
+        /* autoprefixer: off */
+        transition-delay: 0s, 0.15s;
+      }
+
+      &::before {
+        top: 0;
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        bottom: 0;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  // scss-lint:enable NestingDepth
+}

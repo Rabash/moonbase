@@ -1,0 +1,21 @@
+/// Map of grid columns.
+/// @see {function} grid
+/// @type Map
+$grid: (
+  2: (
+    gutter: 3%,
+    column: 48.5%
+  ),
+  3: (
+    gutter: 1.5625%,
+    column: 6.8984375%
+  ),
+  4: (
+    gutter: 1.5625%,
+    column: 6.8984375%
+  ),
+  12: (
+    gutter: 1.5625%,
+    column: 6.8984375%
+  )
+);

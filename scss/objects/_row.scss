@@ -1,0 +1,13 @@
+.o-row {
+  @extend %clearfix;
+  overflow: hidden;
+  margin-bottom: pxtoem(20);
+
+  @include respond-to('medium') {
+    margin-bottom: pxtoem(40);
+  }
+
+  @include respond-to('large') {
+    margin-bottom: pxtoem(60);
+  }
+}

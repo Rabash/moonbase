@@ -1,0 +1,12 @@
+# Development files
+*.pyc
+.DS_Store # mac-files
+.idea # php-storm editor
+
+# Dependency directory
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
+**/node_modules
+
+# Sass-cache and css.map
+**/.sass-cache
+**/*.css.map

@@ -1,0 +1,53 @@
+/// Font size in em.
+/// @param {Number} $target-px - The font-size in pixels you want
+/// @param {Number} $context [$root-font-size] - The font-size of the context you are in
+@function pxtoem($target-px, $context: $root-font-size) {
+  @return $target-px / $context * 1em;
+}
+
+/// Returns a target / context value
+/// @param {Number} $target - The font-size in pixels you want
+/// @param {Number} $context [$root-font-size] - The font-size of the context you are in
+@function remcalc($target, $context: $root-font-size) {
+  @return $target / $context;
+}
+
+/// Size in em and rem.
+/// Grabs the desired size (in px) and spits out an em and a REM value.
+/// @param {String} $selector - The selector
+/// @param {Number} $target - The font-size in pixels you want
+/// @param {Number} $context [$root-font-size] - The font-size of the context you are in
+@mixin rem($selector, $target, $context: $root-font-size) {
+  #{$selector}: $target / $context * 1em;
+  #{$selector}: remcalc($target, $context) + rem;
+}
+
+/// Returns a color.
+/// @param {String} $color-name - Name of the color
+/// @param {String} $tone - The tone variant of the color
+/// @example scss
+///   color: color('yellow', 'shade');
+@function color($color-name, $tone: base) {
+  @return map-get(map-get($colors, $color-name), $tone);
+}
+
+/// Get z-layers.
+/// @param {String} $layer - Name of the layer.
+/// @example scss
+///   z-index: z('dropdown');
+@function z($layer) {
+  @if not map-has-key($z-layers, $layer) {
+    @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
+  }
+
+  @return map-get($z-layers, $layer);
+}
+
+/// Returns a grid gutter or column width.
+/// @param {Number} $grid-columns - Total amount of columns in grid.
+/// @param {String} $context - The number you want.
+/// @example scss
+///   color: color('yellow', 'shade');
+@function grid($grid-columns, $context: column) {
+  @return map-get(map-get($grid, $grid-columns), $context);
+}

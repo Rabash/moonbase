@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Moonbase Style Guide</title>
+
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="kss-assets/kss.css">
+  <link rel="stylesheet" href="../../css/screen.css">
+
+</head>
+<body id="kss-node">
+
+<div class="kss-sidebar kss-style">
+  <header class="kss-header">
+    <a href="index.html"><img src="../../images/png/logo.png" alt="" class="kss-logo" /></a>
+    <h1 class="kss-doc-title">Moonbase Style Guide</h1>
+  </header>
+  <nav class="kss-nav">
+    <ul class="kss-nav__menu">
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="./">
+          <span class="kss-nav__ref">0</span
+          ><span class="kss-nav__name">Introduction</span>
+        </a>
+      </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-colors.html">
+          <span class="kss-nav__ref">1</span><span class="kss-nav__name">Färger</span>
+        </a>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-fonts.html">
+          <span class="kss-nav__ref">2</span><span class="kss-nav__name">Typsnitt</span>
+        </a>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-button.html">
+          <span class="kss-nav__ref">3</span><span class="kss-nav__name">Buttons</span>
+        </a>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-forms.html">
+          <span class="kss-nav__ref">4</span><span class="kss-nav__name">Forms</span>
+        </a>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-grid.html">
+          <span class="kss-nav__ref">5</span><span class="kss-nav__name">Kolumner</span>
+        </a>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-headings.html">
+          <span class="kss-nav__ref">6</span><span class="kss-nav__name">Headings</span>
+        </a>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-logo.html">
+          <span class="kss-nav__ref">7</span><span class="kss-nav__name">Logo</span>
+        </a>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-pagination.html">
+          <span class="kss-nav__ref">8</span><span class="kss-nav__name">Pagination</span>
+        </a>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-text.html">
+          <span class="kss-nav__ref">9</span><span class="kss-nav__name">Text</span>
+        </a>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-visibility.html">
+          <span class="kss-nav__ref">10</span><span class="kss-nav__name">Visibility</span>
+        </a>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-wrappers.html">
+          <span class="kss-nav__ref">11</span><span class="kss-nav__name">Wrapper</span>
+        </a>
+              </li>
+        </ul>
+  </nav>
+</div>
+<article role="main" class="kss-main">
+  <div id="kssref-0" class="kss-section kss-section--depth-0 kss-overview kss-style">
+    <h1 id="introduction">Introduction</h1>
+<p>This is a style guide for your website. Here are all the style elements that are developed, and they serves as a reference point for all those who in some way are working with the website. A style guide is a living documentation developed side by side with the website.</p>
+<p>Purpose of the style guide:</p>
+<ul>
+<li>to document and get an overview of all components</li>
+<li>to create a consistent use of the style elements</li>
+<li>to encourage and facilitate code reuse</li>
+</ul>
+<hr>
+<h1 id="for-developers">For developers</h1>
+<p>Before continuing, you should have a general understanding for specificity, the <a href="http://sass-lang.com/">SCSS syntax</a>, and <a href="https://github.com/kneath/kss">KSS documentation</a>.</p>
+<h2 id="gulp">Gulp</h2>
+<h2 id="coding-style">Coding style</h2>
+<p>We are inspired by, and mostly following <a href="http://sass-guidelin.es/">Sass Guidelines</a> by <a href="http://hugogiraudel.com/">Hugo Giraudel</a>.</p>
+<h3 id="syntax-and-formatting">Syntax and formatting</h3>
+<p>Generally, we want:</p>
+<ul>
+<li>two (2) spaces indents, no tabs;</li>
+<li>ideally, 80-characters wide lines;</li>
+<li>properly written multi-line CSS rules;</li>
+<li>meaningful use of whitespace;</li>
+<li>strings and urls should always be wrapped with single quotes.</li>
+</ul>
+<h3 id="naming-conventions">Naming conventions</h3>
+<p>We use <a href="http://webuild.envato.com/blog/chainable-bem-modifiers/">BEVM</a>, an extension of <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">BEM</a> with <a href="http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/">namespaces</a> and <a href="http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT</a> to make the css both readable and modular.</p>
+<h4 id="bevm">BEVM</h4>
+<p>Example of BEVM:</p>
+<pre><code>.block {}
+.block__element {}
+.block--variant {}
+.block__element--variant {}
+.block--variant.-modifier {}
+</code></pre><h4 id="namespaces">Namespaces</h4>
+<p>We use the following namespaces:</p>
+<ul>
+<li>Object (o-)</li>
+<li>Component (c-)</li>
+<li>Utility, also known as helper (u-)</li>
+<li>Hack (_)</li>
+<li>JavaScript (js-)</li>
+</ul>
+<p><a href="http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/#the-namespaces">More detailed introduction to these namespaces.</a></p>
+<h4 id="bevm-namespaces">BEVM &amp; namespaces</h4>
+<p>Example of BEVM with namespaces:</p>
+<pre><code>.c-block {}
+.c-block.-modifier {}
+.c-block__element {}
+.c-block--variant {}
+.c-block__element--variant {}
+.c-block--variant.-modifier {}
+.c-block--variant.is-open {}
+.c-block.js-accordion {}
+</code></pre><h4 id="responsive-suffixes">Responsive Suffixes</h4>
+<p>Example of BEVM with namespaces and responsive suffixes:</p>
+<pre><code>.o-object\@xlarge {}
+</code></pre><h4 id="single-class-vs-multiple-classes">Single class vs multiple classes</h4>
+<p>We use single classes as &#39;variations&#39; and multiple classes as &#39;chainable modifiers&#39;. We never use both &#39;block&#39;-class and &#39;variant&#39;-classes on the same element. If it has a variation, use only that class.</p>
+<h3 id="architecture">Architecture</h3>
+<p>The CSS architecture is based on <a href="http://www.creativebloq.com/web-design/manage-large-scale-web-projects-new-css-architecture-itcss-41514731">Inverted Triangle CSS</a>
+by <a href="https://twitter.com/csswizardry/">Harry Roberts</a>.
+It is layer-based architecture that goes from generic css to explicit,
+low specificity to high specificity.</p>
+<h4 id="settings">Settings</h4>
+<p>This holds all global settings that need to be accessed from anywhere.
+Examples of settings: font-families, color palettes, configurations.</p>
+<h4 id="tools">Tools</h4>
+<p>Tools are globally available tools like mixins and functions.
+Tools that does not need accessing globally belongs in
+the partial to which it relates.
+Examples of tools: font-sizing mixins, breakpoint mixins.</p>
+<h4 id="generic">Generic</h4>
+<p>This is the first layer that actually produces css.
+Here you can find very high-level, far reaching styles.
+This layer is rarely modified and you&#39; won&#39;t find any classes here.
+Examples: resets, sanitize.</p>
+<h4 id="elements">Elements</h4>
+<p>These are bare, unclassed HTML elements,
+slightly more specific than the generic layer.
+What does a blockquote look like without classes?
+This is the last layer you&#39;ll find bare, element-based selectors.
+Examples: h1, blockquote, ul, image.</p>
+<h4 id="objects">Objects</h4>
+<p>This is the first layer in which we find class-based selectors.
+These are concerned with styling non-cosmetic design patterns, or ‘objects’.
+Examples: wrappers, grids.
+<strong>Prefixed with o-</strong></p>
+<h4 id="components">Components</h4>
+<p>This layers holds the cosmetic design patterns. This is where most of the
+work will happen.
+Examples: icons, menus, pagination.
+<strong>Prefixed with c-</strong></p>
+<h4 id="trumps">Trumps</h4>
+<p>This layers beats all other layers.
+It contains utility and helper classes, hacks and overrides.
+<strong>Prefixed with u-</strong></p>
+<h3 id="commenting">Commenting</h3>
+<p>We use <a href="https://github.com/kneath/kss">KSS</a> for commenting css, and generating documentation.</p>
+<h4 id="sassdoc">SassDoc</h4>
+<p>We use <a href="http://sassdoc.com/">SassDoc</a> for commenting and generating sass-specific documentation, like mixins and variables. These are not included here. <strong>The SassDoc comments are inline with three slashes (///)</strong>.</p>
+<p>Example:</p>
+<pre><code>/// Font size in em.
+/// @param {Number} $target-px - The font-size in pixels you want
+/// @param {Number} $context [$root-font-size] - The font-size of the context you are in
+@function pxtoem($target-px, $context: $root-font-size) {
+  @return $target-px / $context * 1em;
+}
+</code></pre>
+  </div>
+</article>
+
+<!-- SCRIPTS -->
+<script src="kss-assets/kss.js"></script>
+<script src="kss-assets/a11y-toggle.min.js"></script>
+<script src="kss-assets/responsive-nav.js"></script>
+<script src="kss-assets/scrollspy.js"></script>
+<script src="kss-assets/prettify.js"></script>
+<script>
+  prettyPrint();
+  var spy = new ScrollSpy('#kss-node', {
+    nav: '.kss-nav__menu-child > li > a',
+    className: 'is-in-viewport'
+  });
+</script>
+
+
+<!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
+</body>
+</html>
