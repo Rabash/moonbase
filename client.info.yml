@@ -1,0 +1,9 @@
+name: 'Client'
+type: theme
+description: 'A sub-theme based on Client Base.'
+package: Custom
+core: 8.x
+base theme: base
+
+libraries:
+  - client/base

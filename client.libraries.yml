@@ -1,0 +1,5 @@
+base:
+  version: VERSION
+  css:
+    component:
+      css/screen.css: { weight: -10 }

@@ -1,0 +1,51 @@
+client.xsmall:
+  label: xsmall
+  mediaQuery: '(ax-width: 22.438em)'
+  weight: 0
+  multipliers:
+    - 1x
+    - 2x
+client.small:
+  label: small
+  mediaQuery: '(min-width: 22.5em)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+client.medium:
+  label: medium
+  mediaQuery: '(min-width: 34.375em)'
+  weight: 2
+  multipliers:
+    - 1x
+    - 2x
+client.large:
+  label: large
+  mediaQuery: '(min-width: 48em)'
+  weight: 3
+  multipliers:
+    - 1x
+    - 2x
+client.xlarge:
+  label: xlarge
+  mediaQuery: '(min-width: 64em)'
+  weight: 4
+  multipliers:
+    - 1x
+    - 2x
+
+client.xxlarge:
+  label: xxlarge
+  mediaQuery: '(min-width: 77.5em)'
+  weight: 5
+  multipliers:
+    - 1x
+    - 2x
+
+client.xxxlarge:
+  label: xxxlarge
+  mediaQuery: '(min-width: 84.375em)'
+  weight: 6
+  multipliers:
+    - 1x
+    - 2x
