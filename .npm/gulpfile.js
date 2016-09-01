@@ -40,7 +40,7 @@ options.styleGuide = {
   ],
   builder: options.rootPath.styleGuide + 'template',
   homepage: options.theme.sass + 'styleguide.md',
-  title: 'Moonbase Style Guide'
+  title: 'Style Guide'
 };
 
 // Define the path to the project's .scss-lint.yml.
@@ -128,7 +128,6 @@ gulp.task('sassdoc', function () {
 // Build style guide.
 // ##################
 gulp.task('styleguide', function() {
-//gulp.task('styleguide', ['styleguide:color-kss-markup'], shell.task(
   return kss(options.styleGuide);
 });
 

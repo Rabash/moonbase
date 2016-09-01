@@ -1,9 +1,18 @@
-.c-heading {
-  color: color('black');
+// Headings
+//
+// Here is the site's headline sizes in different varieties.
+// Sizes run in an alphabetical order, not to be confused
+// with html-headings such as h1, h2 and so on.
+//
+// Style guide: headings
+
+%heading {
+  color: color('grey', 'dark');
   word-wrap: break-word;
+  font-weight: 400;
 
   a {
-    color: color('black');
+    color: color('grey', 'dark');
     text-decoration: none;
 
     &:hover,
@@ -13,6 +22,10 @@
     }
   }
 
+  .c-bookmark & {
+    overflow: hidden;
+  }
+
   .c-bookmark:hover &,
   .c-bookmark:focus &,
   .c-bookmark:active & {
@@ -20,57 +33,76 @@
   }
 }
 
-// Headings
+// Heading-A
 //
-// Here is the site's headline sizes in different varieties.
-// Sizes run in an alphabetical order, not to be confused
-// with html-headings such as h1, h2 and so on.
+// Style for the c-heading-a class
 //
-// .-center    - Centered
-// .-line      - Line
-// .-white     - White
+// .-center       - Centered
+// .-blue         - Blue
+// .-white        - White
+// .-billboard    - White and bold
 //
-// Markup:
-// <h1 class="c-heading -a {{modifier_class}}">Heading level A</h1>
-// <h2 class="c-heading -b {{modifier_class}}">Heading level B</h2>
-// <h3 class="c-heading -c {{modifier_class}}">Heading level C</h3>
-// <h3 class="c-heading -d {{modifier_class}}">Heading level D</h3>
-// <h3 class="c-heading -e {{modifier_class}}">Heading level E</h3>
+// Markup: heading-a.twig
 //
-// Style guide: headings
+// Style guide: headings.heading-a
 %heading-a,
-.c-heading.-a {
-  font-weight: normal;
+.c-heading-a {
+  @extend %heading;
   font-size: pxtoem(40);
-  line-height: pxtoem(40,40);
-  margin: 0.3em 0 0.6em;
+  line-height: pxtoem(44,40);
+  margin: 0 0 0.3em;
 
-  @include respond-to('large') {
-    font-size: pxtoem(75);
+  @include respond-to('medium-large') {
+    font-size: pxtoem(50);
+  }
+
+  @include respond-to('xxlarge') {
+    font-size: pxtoem(60);
   }
 }
 
+// Heading-B
+//
+// Style for the c-heading-b class
+//
+// .-center       - Centered
+// .-blue         - Blue
+// .-white        - White
+// .-line         - Line
+// .-comment      - Comment
+// .-exclamation  - Exclamation
+//
+// Markup: heading-b.twig
+//
+// Style guide: headings.heading-b
 %heading-b,
-.c-heading.-b {
-  font-weight: normal;
-  font-size: pxtoem(30);
-  line-height: pxtoem(34,30);
-  margin: 0 0 0.6em;
+.c-heading-b {
+  @extend %heading;
+  font-size: pxtoem(24);
+  line-height: pxtoem(33,24);
+  margin: 0 0 0.9em;
 
   @include respond-to('large') {
-    font-size: pxtoem(40);
+    font-size: pxtoem(27);
+    margin: 0 0 1.6em;
   }
 }
 
+// Heading-C
+//
+// Style for the c-heading-c class
+//
+// .-center       - Centered
+// .-blue         - Blue
+// .-white        - White
+//
+// Markup: heading-c.twig
+//
+// Style guide: headings.heading-c
 %heading-c,
-.c-heading.-c {
-  font-weight: bold;
-  font-size: pxtoem(18);
-  line-height: pxtoem(24,18);
-  margin: 0 0 0.6em;
-
-  @include respond-to('large') {
-    font-size: pxtoem(24);
-    font-size: pxtoem(30,24);
-  }
+.c-heading-c {
+  @extend %heading;
+  font-size: pxtoem(24);
+  line-height: 1.15;
+  margin: 0 0 0.5em;
 }

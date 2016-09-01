@@ -1,17 +1,34 @@
 // Logo
 //
-// Style guide: logo
+// No style guide reference
 .c-logo {
-  margin-top: 1.2em;
   float: left;
+  background-image: url('../logo.svg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
 
-  @include respond-to('xlarge') {
-    margin-right: 10%;
+  @include respond-to('large') {
+    margin-top: 1.8em;
+    margin-right: 2em;
+
+    .maintenance-page & {
+      padding-bottom: 1.8em;
+    }
   }
 
-  @include respond-to('xsmall-xlarge') {
-    max-width: pxtoem(42);
-    margin-bottom: 0.8em;
-    margin-top: 0.8em;
+  @include respond-to('xlarge') {
+    margin-right: 5em;
+    margin-right: 4em;
+  }
+
+  &__image {
+    opacity: 0;
+    width: pxtoem(92);
+    height: pxtoem(38);
+
+    @include respond-to('large') {
+      width: pxtoem(173);
+      height: pxtoem(72);
+    }
   }
 }

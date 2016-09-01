@@ -1,19 +1,19 @@
 @font-face {
-  font-family: 'veneerregular';
-  src: url("../fonts/veneer-webfont.woff2") format("woff2"), url("../fonts/veneer-webfont.woff") format("woff");
-  font-weight: normal;
+  font-family: 'ITCBaileySansW01-Book';
+  src: url("../fonts/47c763ea-084a-46ab-99aa-d4f5f0448a9a.woff2") format("woff2"), url("../fonts/d4dcda7c-1162-4849-86ad-8c3710687c10.woff") format("woff"), url("../fonts/50ba5770-1aa2-45e7-a006-4ed5680dd0e0.ttf") format("truetype");
+  font-weight: 400;
   font-style: normal; }
 
 @font-face {
-  font-family: 'HelveticaNeueLTStd';
-  src: url("../fonts/HelveticaNeueLTStdRoman.woff2") format("woff2"), url("../fonts/HelveticaNeueLTStdRoman.woff") format("woff");
-  font-weight: normal;
+  font-family: 'ITCBaileySansW01-Bold';
+  src: url("../fonts/7e4132c8-ead5-4aca-8bd4-4cf997fa7405.woff2") format("woff2"), url("../fonts/251f4b6b-9fff-4d66-9ff9-3ca5d90f3db1.woff") format("woff"), url("../fonts/3dbdb32e-fd26-4fb5-b2cf-76c683938317.ttf") format("truetype");
+  font-weight: 700;
   font-style: normal; }
 
 @font-face {
-  font-family: 'HelveticaNeueLTStd';
-  src: url("../fonts/HelveticaNeueLTStdBd.woff2") format("woff2"), url("../fonts/HelveticaNeueLTStdBd.woff") format("woff");
-  font-weight: bold;
+  font-family: 'SabonETW01-Roman';
+  src: url("../fonts/ef12a52c-a47f-49fe-b5bb-ee15aa7b5377.woff2") format("woff2"), url("../fonts/13b0a4ee-3238-4837-bb6e-162ae2990401.woff") format("woff"), url("../fonts/39085db1-1140-43b6-bd13-a6f8a8d99ea7.ttf") format("truetype");
+  font-weight: 400;
   font-style: normal; }
 
 .kss-modifier__heading {
@@ -30,8 +30,8 @@ html {
 
 .kss-sidebar {
   padding: 0.6em 1em;
-  background: #fdfdfd;
-  border-bottom: 2px solid #e9e9e9; }
+  background: #fff;
+  border-bottom: 2px solid #ebebeb; }
   @media (min-width: 48em) {
     .kss-sidebar {
       position: fixed;
@@ -39,7 +39,7 @@ html {
       height: 100%;
       overflow: auto;
       padding: 1.5em 0 0;
-      border-right: 2px solid #e9e9e9;
+      border-right: 2px solid #ebebeb;
       border-bottom: 0; } }
 
 @media (min-width: 48em) {
@@ -72,10 +72,10 @@ html {
   text-align: center; }
   @media (min-width: 48em) {
     .kss-nav__menu {
-      border-bottom: 2px solid #e9e9e9;
+      border-bottom: 2px solid #ebebeb;
       text-align: left; } }
   .kss-nav__menu-child {
-    border-top: 2px solid #e9e9e9;
+    border-top: 2px solid #ebebeb;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -85,7 +85,7 @@ html {
         display: block; } }
     .kss-nav__menu-child .kss-nav__menu-item .kss-nav__menu-link {
       padding-left: 1.8em;
-      border-left: 6px solid #e9e9e9; }
+      border-left: 6px solid #ebebeb; }
   .kss-nav__menu-item {
     display: inline-block; }
     @media (min-width: 48em) {
@@ -96,7 +96,7 @@ html {
           border: 0; } }
 
 .kss-nav__menu-link {
-  transition: all 0.1s ease-in-out;
+  transition: all 0.2s ease-in-out;
   display: inline-block;
   padding: 0.2em 0.25em;
   color: currentColor; }
@@ -105,7 +105,7 @@ html {
       display: block;
       padding: 0.6em 1em; } }
   .kss-nav__menu-link:hover, .kss-nav__menu-link:focus, .kss-nav__menu-link:active, .kss-nav__menu-link.is-in-viewport {
-    background: #e9e9e9;
+    background: #ebebeb;
     text-decoration: none; }
     .kss-nav__menu-link:hover .kss-nav__name, .kss-nav__menu-link:focus .kss-nav__name, .kss-nav__menu-link:active .kss-nav__name, .kss-nav__menu-link.is-in-viewport .kss-nav__name {
       text-decoration: underline; }
@@ -114,7 +114,7 @@ html {
       opacity: 0.8; }
 
 .kss-nav__ref {
-  transition: all 0.1s ease-in-out;
+  transition: all 0.2s ease-in-out;
   font-weight: bold;
   opacity: 0.2;
   margin-right: 0.3em; }
@@ -131,7 +131,7 @@ html {
     opacity: 0.6; }
 
 .kss-title__permalink-hash {
-  transition: all 0.1s ease-in-out;
+  transition: all 0.2s ease-in-out;
   opacity: 0;
   margin-left: 0.5em;
   text-decoration: none; }
@@ -146,10 +146,10 @@ html {
 
 .kss-modifier__wrapper,
 .kss-markup {
-  border: 2px solid #e4e4e4; }
+  border: 2px solid #e6e6e6; }
 
 .kss-modifier {
-  border-bottom: 1px solid #e9e9e9;
+  border-bottom: 1px solid #ebebeb;
   padding: 2em;
   position: relative;
   overflow: hidden; }
@@ -161,8 +161,8 @@ html {
   top: 0;
   right: 0;
   background: white;
-  border-left: 1px solid #e9e9e9;
-  border-bottom: 1px solid #e9e9e9;
+  border-left: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
   padding: 0.5em; }
 
 .kss-modifier__description {
@@ -172,7 +172,7 @@ html {
 
 .kss-markup__button {
   margin-top: 0.8em;
-  background-color: #e9e9e9;
+  background-color: #ebebeb;
   padding: 0.2em 0.5em;
   border: 0; }
 
@@ -209,15 +209,17 @@ html {
   padding: 0.2em 0; }
 
 .kss-row {
+  overflow: hidden;
   background: #999;
   min-height: 2em;
   text-align: center;
-  padding: 0.2em 0; }
+  padding: 0.2em 0;
+  color: #fff; }
 
 .kss-grid {
+  overflow: hidden;
   background: #666;
-  color: #fff;
-  height: 2em;
+  min-height: 2em;
   padding: 0.2em 0;
   margin-top: 0.5em;
   margin-bottom: 0.5em;

@@ -14,7 +14,8 @@
 @import 'components/text/text';
 
 // scss-lint:disable all
-body#tinymce.wp-editor {
+body {
   @extend .c-body;
   margin: 2em;
+  width: 727px;
 }

@@ -1,3 +1,22 @@
+// Grid utilities
+//
+// Helpers for grid. Overrides all other properties with !important.
+// Should be avoided if possible.
+// The `@`-sign is used to determine at what breakpoint this grid is used.
+//
+// .u-left - Float element to the left
+// .u-right - Float element to the right
+// .u-last - Removes right margin on grid elements
+// .u-center - Center with margin: 0 auto;
+// .u-center-align - text-align: center;
+// .u-center-vertical - Vertical centering
+// .u-clear-none - clear: none;
+// .u-first - clear: left;
+// .u-overflow-hidden - overflow: hidden;
+// .u-relative - position: relative;
+//
+// Style guide: grid.trumps
+
 /* Helper to see utility-classes /*
 /*[class^="u-"],
 [class*=" u-"] {
@@ -19,6 +38,11 @@
 
   .u-left\@medium-large {
     float: left;
+  }
+
+  .u-center\@medium-large {
+    margin-right: auto !important;
+    margin-left: auto !important;
   }
 }
 
@@ -50,6 +74,21 @@
     margin-right: auto !important;
     margin-left: auto !important;
   }
+
+  .u-clear-none\@large {
+    clear: none !important;
+  }
+}
+
+@include respond-to('large-xlarge') {
+  .u-last\@large-xlarge {
+    margin-right: 0 !important;
+  }
+
+  .u-center\@large-xlarge {
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
 }
 
 @include respond-to('xlarge') {
@@ -64,6 +103,11 @@
   .u-last\@xlarge {
     margin-right: 0;
     clear: right;
+  }
+
+  .u-center\@xlarge {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -97,5 +141,13 @@
 
 .u-first {
   clear: left;
+}
+
+.u-overflow-hidden {
+  overflow: hidden;
+}
+
+.u-relative {
+  position: relative;
 }
 // scss-lint:enable ImportantRule

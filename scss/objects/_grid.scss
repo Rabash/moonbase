@@ -1,24 +1,13 @@
-// Kolumner
+// Grid
 //
-// Ramverket för webbplatser är baserad på 12 kolumner.
-// <br><em>(category: grid)</em>
+// The grid is based on 12 columns for breakpoints `large` and up.
+// Smaller breakpoints uses a 2 column layout.
+// The `@`-sign is used to determine at what breakpoint this grid is used.
+// An element with the classes `o-1-2@xsmall-large` and `o-8-12@large` will be
+// 1/2 of the available screen size at breakpoints small to large, and 8/12 of
+// the available size at breakpoints large and up.
 //
-// Markup:
-// <div class="o-wrapper kss-wrapper">
-//  <div class="o-row kss-row">
-//    <div class="o-8-12@large u-left@large kss-grid">.o-8-12 .u-left</div>
-//    <div class="o-4-12@large u-left@large u-last@large kss-grid">.o-4-12 .u-left .u-last</div>
-//  </div>
-//  <div class="o-row kss-row">
-//    <div class="o-4-12@large u-left@large kss-grid">.o-4-12 .u-left</div>
-//    <div class="o-4-12@large u-left@large kss-grid">.o-4-12 .u-left</div>
-//    <div class="o-4-12@large u-left@large kss-grid">.o-4-12 .u-left .u-last</div>
-//  </div>
-//  <div class="o-row kss-row">
-//    <div class="o-6-12@large u-left@large kss-grid">.o-6-12 .u-left</div>
-//    <div class="o-6-12@large u-left@large kss-grid">.o-6-12 .u-left .u-last</div>
-//  </div>
-// </div>
+// Markup: grid.twig
 //
 // Style guide: grid
 
@@ -35,9 +24,20 @@
 @include grid-breakpoint('xlarge', 12);
 @include grid-breakpoint('xxlarge', 12);
 
+@include respond-to('xlarge') {
+
+  .o-1-left\@xlarge {
+    margin-left: grid(12) + grid(12, 'gutter');
+  }
+
+  .o-2-left\@xlarge {
+    margin-left: grid(12) + grid(12, 'gutter') * 2;
+  }
+}
+
 @include respond-to('xxlarge') {
 
-  .o-1-left\@xxlarge {
-    margin-left: grid(12) + grid(12, 'gutter');
+  .o-2-left\@xxlarge {
+    margin-left: grid(12) + grid(12, 'gutter') * 2;
   }
 }

@@ -1,164 +1,196 @@
 @charset "UTF-8";
 
-@font-face {
-  font-family: 'veneerregular';
-  src: url("../fonts/veneer-webfont.woff2") format("woff2"), url("../fonts/veneer-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'HelveticaNeueLTStd';
-  src: url("../fonts/HelveticaNeueLTStdRoman.woff2") format("woff2"), url("../fonts/HelveticaNeueLTStdRoman.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'HelveticaNeueLTStd';
-  src: url("../fonts/HelveticaNeueLTStdBd.woff2") format("woff2"), url("../fonts/HelveticaNeueLTStdBd.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-}
-
 .c-body,
-body#tinymce.wp-editor {
+body {
+  font-family: Georgia, Times, "Times New Roman", serif;
   font-size: 0.875em;
-  line-height: 1.71429em;
-  max-width: 40em;
-  margin: 0;
-}
-
-.c-body__preamble {
-  font-size: 1.2em;
+  line-height: 1.65;
+  max-width: 34em;
 }
 
 .c-body img,
-body#tinymce.wp-editor img,
+body img,
 .c-body .c-media,
-body#tinymce.wp-editor .c-media {
+body .c-media {
   display: block;
   margin: 0 0 1.5em;
 }
 
 .c-body video,
-body#tinymce.wp-editor video,
+body video,
 .c-body object,
-body#tinymce.wp-editor object,
+body object,
 .c-body iframe,
-body#tinymce.wp-editor iframe {
+body iframe {
   max-width: 100%;
   margin: 0 0 1.5em;
 }
 
 .c-body a,
-body#tinymce.wp-editor a {
-  -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
-  color: #1e1e1e;
-  border-bottom: solid 0.1em #e0119d;
+body a {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: #676767;
+  border-bottom: solid 0.08em #4484ce;
   text-decoration: none;
 }
 
 .c-body a:hover,
-body#tinymce.wp-editor a:hover,
+body a:hover,
 .c-body a:focus,
-body#tinymce.wp-editor a:focus,
+body a:focus,
 .c-body a:active,
-body#tinymce.wp-editor a:active {
-  border-bottom: solid 0.2em #e0119d;
+body a:active {
+  color: #4484ce;
+  border-bottom-color: #4484ce;
+}
+
+.c-body a:visited,
+body a:visited {
+  border-bottom-color: #94618e;
+}
+
+.c-body a:hover:visited,
+body a:hover:visited,
+.c-body a:focus:visited,
+body a:focus:visited,
+.c-body a:active:visited,
+body a:active:visited {
+  color: #94618e;
 }
 
 .c-body ul,
-body#tinymce.wp-editor ul,
+body ul,
 .c-body ol,
-body#tinymce.wp-editor ol {
+body ol {
   padding-left: 3em;
   margin-top: 0;
   margin-bottom: 1.6em;
 }
 
 .c-body ul:last-child,
-body#tinymce.wp-editor ul:last-child,
+body ul:last-child,
 .c-body ol:last-child,
-body#tinymce.wp-editor ol:last-child {
+body ol:last-child {
   margin: 0;
 }
 
 .c-body li,
-body#tinymce.wp-editor li {
+body li {
   padding-left: 0.3em;
 }
 
 .c-body table,
-body#tinymce.wp-editor table {
+body table {
   margin-bottom: 1.6em;
 }
 
 .c-body h2,
-body#tinymce.wp-editor h2 {
-  font-size: 1.28571em;
-  line-height: 1.44444em;
+body h2 {
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
   font-weight: bold;
-  margin: 1.6em 0 0.4em;
+  font-size: 1.375em;
+  margin: 2em 0 0.3em;
+  color: #333;
+}
+
+.c-body h3,
+body h3 {
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+  font-weight: normal;
+  font-size: 1.125em;
+  margin: 2em 0 0.3em;
+  color: #333;
 }
 
 .c-body p,
-body#tinymce.wp-editor p {
+body p {
   margin: 0 0 1em;
 }
 
 .c-body p:last-child,
-body#tinymce.wp-editor p:last-child {
+body p:last-child {
   margin: 0;
 }
 
 .c-body blockquote,
-body#tinymce.wp-editor blockquote {
+body blockquote {
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+  color: #333;
   position: relative;
-  font-size: 1.71429em;
-  line-height: 1.16667em;
-  font-family: "veneerregular", Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";
+  font-size: 1.125em;
+  line-height: 1.25em;
   text-align: center;
-  color: #575757;
   margin: 3em 0.5em 1.5em;
 }
 
-.c-body blockquote::before,
-body#tinymce.wp-editor blockquote::before {
+.c-body blockquote:before,
+body blockquote:before {
   position: absolute;
   content: '”';
   font-size: 3.5em;
   line-height: 1em;
-  color: #00b9e4;
+  color: #333;
   top: -0.5em;
   left: 0;
   right: 0;
 }
 
 .c-body *:first-child,
-body#tinymce.wp-editor *:first-child {
+body *:first-child {
   margin-top: 0;
 }
 
-body#tinymce.wp-editor {
-  margin: 2em;
+.c-preamble {
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 1em;
+  line-height: 1.65;
+  max-width: 34em;
+  font-style: italic;
 }
 
-@media (min-width: 48em) {
+body {
+  margin: 2em;
+  width: 727px;
+}
+
+@media (min-width: 34.375em) {
   .c-body,
-  body#tinymce.wp-editor {
+  body {
     font-size: 1em;
   }
 
+  .c-preamble {
+    font-size: 1.125em;
+  }
+}
+
+@media (min-width: 64em) {
+  .c-body,
+  body {
+    font-size: 1.125em;
+  }
+
+  .c-preamble {
+    font-size: 1.375em;
+  }
+}
+
+@media (min-width: 48em) {
   .c-body h2,
-  body#tinymce.wp-editor h2 {
-    font-size: 1.5em;
+  body h2 {
+    font-size: 1.4em;
+  }
+
+  .c-body h3,
+  body h3 {
+    font-size: 1.2em;
   }
 
   .c-body blockquote,
-  body#tinymce.wp-editor blockquote {
-    font-size: 1.875em;
+  body blockquote {
+    font-size: 1.28571em;
+    line-height: 1.2963em;
   }
 }
 /*# sourceMappingURL=../css/maps/wysiwyg.css.map */

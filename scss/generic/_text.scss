@@ -76,6 +76,9 @@ kbd,
 pre,
 samp {
   font-family: monospace;
+  background: rgba(0,0,0,0.1);
+  padding: 0.1em 0.3em;
+  font-size: 0.8em;
 }
 
 // Improve overflow and readability of preformatted text.
@@ -88,11 +91,11 @@ pre {
 
 // Selection color
 ::-moz-selection {
-  background: #e0119d;
+  background: #e6007e;
   color: #fff;
 }
 
 ::selection {
-  background: #e0119d;
+  background: #e6007e;
   color: #fff;
 }

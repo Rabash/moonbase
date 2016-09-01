@@ -1,0 +1,79 @@
+.c-comment-list {
+  list-style: none;
+  margin: 0 0 2em;
+  padding: 0;
+}
+
+// Comments
+//
+// Markup: comments.twig
+//
+// Style guide: comments
+.c-comment {
+  @include clearfix;
+  background: color('yellow');
+  padding: 2em 2.5em;
+  max-width: pxtoem(500);
+  float: left;
+  margin-bottom: 2em;
+  margin-left: pxtoem(20);
+  position: relative;
+
+  &:before {
+    position: absolute;
+    top: 45%;
+    left: pxtoem(-20);
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: pxtoem(20) pxtoem(20) pxtoem(20) 0;
+    border-color: transparent color('yellow') transparent transparent;
+  }
+
+  &:nth-child(even) {
+    float: right;
+    margin-left: 0;
+    margin-right: pxtoem(20);
+    text-align: right;
+
+    &:before {
+      position: absolute;
+      top: 45%;
+      left: auto;
+      right: pxtoem(-20);
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: pxtoem(20) 0 pxtoem(20) pxtoem(20);
+      border-color: transparent transparent transparent color('yellow');
+    }
+  }
+
+  &__body {
+    font-family: $georgia;
+    font-size: pxtoem(14);
+    line-height: 1.65;
+
+    @include respond-to('large') {
+      font-size: pxtoem(16);
+    }
+
+    p {
+      bottom: 0 0 1.7em;
+
+      &:last-child {
+        margin: 0 0 0.6em;
+      }
+    }
+  }
+
+  &__meta {
+    color: color('blue');
+
+    a {
+      color: color('blue');
+    }
+  }
+}

@@ -3,3 +3,49 @@
   <input type="text" class="c-form__text -error" id="text" aria-describedby="text-error"/>
   <div class="c-form__error" id="text-error" role="alert">Helpful error message</div>
 </div>
+
+<div class="c-form__item">
+  <label class="c-form__label" for="selectDropdown">A standard drop-down</label>
+  <select class="c-form__select -error" id="selectDropdown" aria-describedby="text-error">
+    <option>Option 1</option>
+    <option>Option 2</option>
+    <option>Option 3</option>
+    <optgroup label="More options">
+      <option>Option 4</option>
+      <option>Option 5</option>
+    </optgroup>
+  </select>
+  <div class="c-form__error" id="text-error" role="alert">Helpful error message</div>
+</div>
+
+
+<fieldset class="c-form__checkboxes">
+  <legend><span class="c-form__label">Weekdays</span></legend>
+    <ul class="c-form__list">
+      <li class="c-form__item -checkbox">
+        <input class="c-form__checkbox" id="monday" type="checkbox" name="monday" value="monday" checked="" aria-describedby="text-error">
+        <label class="c-form__label -option" for="monday">Monday</label>
+      </li>
+      <li class="c-form__item -checkbox">
+        <input class="c-form__checkbox" id="tuesday" type="checkbox" name="tuesday" value="tuesday" aria-describedby="text-error">
+        <label class="c-form__label -option" for="tuesday">Tuesday</label>
+      </li>
+    </ul>
+    <div class="c-form__error" id="text-error" role="alert">Helpful error message</div>
+</fieldset>
+
+
+<fieldset class="c-form__radios">
+  <legend><span class="c-form__label">Countries</span></legend>
+    <ul class="c-form__list">
+      <li class="c-form__item -radio">
+        <input class="c-form__radio" id="norway" type="radio" name="country" value="norway" checked="" aria-describedby="text-error">
+        <label class="c-form__label -option" for="norway">Norway</label>
+      </li>
+      <li class="c-form__item -radio">
+        <input class="c-form__radio" id="poland" type="radio" name="country" value="poland" aria-describedby="text-error">
+        <label class="c-form__label -option" for="poland">Poland</label>
+      </li>
+    </ul>
+    <div class="c-form__error" id="text-error" role="alert">Helpful error message</div>
+</fieldset>

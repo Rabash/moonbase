@@ -7,6 +7,7 @@
 // <h2 href="#" class="u-visually-hidden u-focusable">Invisible but focusable heading</h2>
 //
 // Style guide: visibility
+
 .u-visually-hidden {
   @extend %visually-hidden;
 }
@@ -21,5 +22,33 @@
     height: auto;
     width: auto;
     overflow: auto;
+  }
+}
+
+.u-hidden {
+  display: none;
+}
+
+@include respond-to('xsmall-medium') {
+  .u-hidden\@xsmall-medium {
+    display: none;
+  }
+}
+
+@include respond-to('xsmall-xlarge') {
+  .u-hidden\@xsmall-xlarge {
+    display: none;
+  }
+}
+
+@include respond-to('large') {
+  .u-hidden\@large {
+    display: none;
+  }
+}
+
+@include respond-to('xlarge') {
+  .u-hidden\@xlarge {
+    display: none;
   }
 }

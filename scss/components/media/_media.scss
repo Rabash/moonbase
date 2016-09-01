@@ -1,0 +1,12 @@
+// Media
+//
+// No style guide reference
+.c-media {
+  margin-bottom: 0.5em;
+
+  &__caption {
+    text-align: right;
+    color: color('grey');
+    line-height: pxtoem(16);
+  }
+}

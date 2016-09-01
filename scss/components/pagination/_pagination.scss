@@ -3,21 +3,68 @@
 // Markup: pagination.twig
 //
 // Style guide: pagination
-.c-pagination {
+.c-pager {
+  text-align: center;
 
-  &__next {
-    @extend %button;
-    float: right;
-    background-repeat: no-repeat;
-    background-size: 1.25em 1.2em;
-    background-position: right 0.7em center;
+  @include respond-to('xsmall-large') {
+    &__item {
+      display: none;
+
+      &.-previous,
+      &.-next {
+        display: inline-block;
+      }
+    }
   }
 
-  &__previous {
-    @extend %button;
-    float: left;
-    background-repeat: no-repeat;
-    background-size: 1.25em 1.2em;
-    background-position: right 0.7em center;
+  &__items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: inline-block;
+    margin: 0 0.2em;
+
+    a {
+      @include transition;
+      border-radius: pxtoem(10);
+      border: solid 1px color('grey', 'dark');
+      background-color: transparent;
+      color: color('grey', 'dark');
+      font-size: pxtoem(18);
+      padding: 0.6em 1em;
+      display: inline-block;
+
+      // scss-lint:disable NestingDepth
+      &:hover,
+      &:focus,
+      &:active {
+        border: solid 1px color('blue');
+        background-color: color('blue');
+        color: color('white');
+      }
+      // scss-lint:enable NestingDepth
+    }
+
+    &.-active {
+      // scss-lint:disable NestingDepth
+      a {
+        background: color('blue');
+        border-color: color('blue');
+        color: color('white');
+
+        &:hover,
+        &:focus,
+        a:hover,
+        a:focus {
+          border-color: color('blue');
+          background-color: color('blue');
+          color: color('white');
+        }
+      }
+      // scss-lint:enable NestingDepth
+    }
   }
 }

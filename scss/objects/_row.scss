@@ -1,3 +1,10 @@
+// Row
+//
+// Rows are used to create a consistent system of margins between elements.
+//
+// Markup: row.twig
+//
+// Style guide: grid.row
 .o-row {
   @extend %clearfix;
   overflow: hidden;
@@ -9,5 +16,74 @@
 
   @include respond-to('large') {
     margin-bottom: pxtoem(60);
+  }
+
+  &.-small {
+    margin-bottom: pxtoem(20);
+
+    @include respond-to('medium') {
+      margin-bottom: pxtoem(25);
+    }
+
+    @include respond-to('large') {
+      margin-bottom: pxtoem(30);
+    }
+  }
+
+  &.-large {
+    margin-bottom: pxtoem(30);
+
+    @include respond-to('medium') {
+      margin-bottom: pxtoem(60);
+    }
+
+    @include respond-to('large') {
+      margin-bottom: pxtoem(90);
+    }
+  }
+}
+
+// Faux Row
+//
+// Faux rows are used like rows, but for places that need top padding instead.
+// Useful for first elements in wrappers. Often used together with `o-row`.
+// Always consider using a row above the element instead of a faux row.
+//
+// Markup: faux-row.twig
+//
+// Style guide: grid.row.faux
+.o-faux-row {
+  padding-top: pxtoem(20);
+
+  @include respond-to('medium') {
+    padding-top: pxtoem(40);
+  }
+
+  @include respond-to('large') {
+    padding-top: pxtoem(60);
+  }
+
+  &.-small {
+    padding-top: pxtoem(20);
+
+    @include respond-to('medium') {
+      padding-top: pxtoem(25);
+    }
+
+    @include respond-to('large') {
+      padding-top: pxtoem(30);
+    }
+  }
+
+  &.-large {
+    padding-top: pxtoem(30);
+
+    @include respond-to('medium') {
+      padding-top: pxtoem(60);
+    }
+
+    @include respond-to('large') {
+      padding-top: pxtoem(90);
+    }
   }
 }

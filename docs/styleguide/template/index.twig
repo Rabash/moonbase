@@ -15,8 +15,7 @@
 
 <div class="kss-sidebar kss-style">
   <header class="kss-header">
-    <a href="index.html"><img src="../../images/png/logo.png" alt="" class="kss-logo" /></a>
-    <h1 class="kss-doc-title">{{ options.title }}</h1>
+    <h1 class="kss-doc-title"><a href="index.html">{{ options.title }}</a></h1>
   </header>
   <nav class="kss-nav">
     <ul class="kss-nav__menu">
@@ -80,8 +79,8 @@
         </{{ headerElement }}>
 
         {% if section.description %}
-          <div class="kss-description c-body">
-            <div class="c-body__preamble">
+          <div class="kss-description">
+            <div class="c-preamble">
               {{ section.description|raw }}
             </div>
           </div>
@@ -161,10 +160,9 @@
 
 <!-- SCRIPTS -->
 <script src="kss-assets/kss.js"></script>
-<script src="kss-assets/a11y-toggle.min.js"></script>
-<script src="kss-assets/responsive-nav.js"></script>
 <script src="kss-assets/scrollspy.js"></script>
 <script src="kss-assets/prettify.js"></script>
+<script src="../../js/min/script.min.js"></script>
 <script>
   prettyPrint();
   var spy = new ScrollSpy('#kss-node', {

@@ -1,7 +1,14 @@
 html {
   line-height: $root-line-height;
   padding: 0;
-  background-color: color('grey', 'lightest');
-  color: color('black');
-  font-family: $helvetica;
+  background-color: color('grey', 'lighter');
+  color: color('grey', 'dark');
+  font-family: $tahoma;
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  height: 100%;
+  min-height: 100%;
 }

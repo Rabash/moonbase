@@ -4,6 +4,33 @@
 //
 // Style guide: forms
 
+// Form__Wrapper
+//
+// Wrapper for parts of form, for example the action-part (submit-button).
+//
+// No styleguide reference
+.c-form__wrapper {
+  @include clearfix;
+
+  .c-search & {
+    display: inline;
+  }
+
+  // Center form actions (submit button)
+  &[id$='actions'] {
+    text-align: center;
+  }
+}
+
+// List
+//
+// No styleguide reference
+.c-form__list {
+  list-style: none;
+  margin: 0.2em 0;
+  padding: 0;
+}
+
 // Form item
 //
 // Wrapper for a form element (or group of form elements) and its label.
@@ -15,10 +42,23 @@
 // Style guide: forms.form-item
 .c-form__item {
   margin-bottom: 1.5em;
+  max-width: pxtoem(616); // Width of 8 columns
 
   &.-checkbox,
   &.-radio {
-    margin-bottom: 0.2em;
+    margin-bottom: 0.5em;
+  }
+
+  &.-search {
+    max-width: none;
+    display: inline-block;
+    width: 65%;
+    margin-right: 2%;
+    margin-bottom: 0;
+
+    @include respond-to('medium') {
+      width: 78%;
+    }
   }
 }
 
@@ -34,13 +74,11 @@
 .c-form__label {
   cursor: pointer;
   display: block;
-  font-weight: bold;
   font-size: pxtoem(16);
   margin-bottom: pxtoem(5,16);
 
   @include respond-to('large') {
     font-size: pxtoem(18);
-    margin-bottom: pxtoem(20,18);
   }
 
   &.-option {
@@ -51,20 +89,23 @@
 }
 
 .c-form__required {
-  color: color('pink');
+  color: color('blue');
   font-weight: bold;
 }
 
 // Description
 //
 // Descriptions are sometimes needed as a complement to the label.
+// Descriptions should make use of the `aria-describedby`-attribute to
+// indicate a connection between `input` and description.
 //
 // Markup: forms-description.twig
 //
 // Style guide: forms.description
 .c-form__description {
-  font-size: pxtoem(13);
-  color: color('black');
+  margin-top: 0.5em;
+  font-size: pxtoem(14);
+  color: color('grey');
   display: block;
 }
 
@@ -75,8 +116,6 @@
 // `time`, `number`, `range`, `color`, and `file`.
 //
 // :disabled  - Disabled
-// .-error    - Error
-// .-success  - Success
 //
 // Markup: forms-input.twig
 //
@@ -87,50 +126,168 @@
 // The `<textarea>` element represents a multi-line plain text form field.
 //
 // :disabled  - Disabled
-// .-error    - Error
-// .-success  - Success
 //
 // Markup: forms-textarea.twig
 //
 // Style guide: forms.textarea
 %form--element,
+.c-form__search,
+.c-form__password,
 .c-form__text,
 .c-form__textarea {
   @include transition;
+  border: 0;
   font-size: pxtoem(16);
-  padding: 1em 1em 0.5em;
+  color: color('grey', 'darker');
+  padding: 0.9em 1em 0.8em;
   background-color: color('white');
   border-radius: pxtoem(5);
-  border: 1px solid ('black');
-  box-shadow: inset 0 1px 0 0 color('grey'), 0 0 0 1px color('grey');
-  width: 100%;
-  max-width: 35em;
+  border: 1px solid ('grey', 'darker');
+  box-shadow: 0 0 0 1px color('grey');
+  box-sizing: border-box;
+  width: calc(100% - 2px);
+  margin: 1px; // Compensate for box-shadow being outside
+  max-width: pxtoem(614); // Width of 8 columns minus box-shadow compensation
 
   &:hover,
   &:focus,
   &.pseudo-class-focus,
   &:active {
-    box-shadow: inset 0 2px 0 0 color('grey'), 0 0 0 1px color('grey', 'dark');
+    outline: 0;
+    box-shadow: 0 0 0 1px color('black');
   }
 
   &.-error {
-    border-color: color('red');
+    box-shadow: 0 0 0 2px color('red');
+    border-radius: pxtoem(5) pxtoem(5) 0 0;
+    margin: 2px; // Compensate for box-shadow being outside
+    max-width: pxtoem(612); // Width of 8 columns minus box-shadow compensation
+
+    &:not(.c-form__select) {
+      background-image: url('../images/svg/icon--warning.svg');
+      background-repeat: no-repeat;
+      background-position: right 0.6em center;
+      background-size: 20px 20px;
+    }
   }
 
   &.-success {
     border-color: color('green');
   }
 
-  // TODO: Hannah has cool script for this that needs javascript rewriting.
-  &.-file {
-
-  }
-
   &:disabled,
   &.pseudo-class-disabled {
     background-color: color('grey', 'light');
-    box-shadow: 0 0 0 1px color('grey');
+    color: color('grey');
+    box-shadow: 0 0 0 1px color('grey', 'light');
     cursor: not-allowed;
+  }
+
+  .c-search & {
+    width: 100%;
+    max-width: none;
+
+    &:focus {
+      box-shadow: 0 0 0 1px color('blue');
+    }
+  }
+}
+
+// File upload
+//
+// Markup: forms-file.twig
+//
+// Style guide: forms.form__file
+.c-form__file {
+  clear: both;
+  position: relative;
+  width: 100%;
+  min-height: pxtoem(46,16);
+  margin-bottom: 1em;
+  max-width: 35em;
+
+  &:after {
+    @extend %form--element;
+    @include transition;
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: color('grey');
+    font-weight: normal;
+    pointer-events: none;
+    z-index: z('dropdown');
+    -webkit-appearance: none;
+    outline: 0;
+    margin: 0;
+    text-align: left;
+    font-size: pxtoem(16,16);
+    border: solid 1px color('grey', 'light');
+    height: pxtoem(46,16);
+    line-height: 1.8;
+    vertical-align: top;
+    width: 100%;
+    cursor: pointer;
+
+    @include respond-to('medium') {
+      padding: pxtoem(10,16) 5.8% pxtoem(10,16) 2.8%;
+      width: 100%;
+    }
+
+    @include respond-to('large') {
+      padding: pxtoem(10,16) 35px pxtoem(10,16) 15px;
+      max-width: 100%;
+    }
+  }
+
+  &:before {
+    @include transition;
+    font-weight: bold;
+    font-size: pxtoem(16);
+    padding: 1em 1.2em 0.6em;
+    border-radius: 0 pxtoem(5) pxtoem(5) 0;
+    text-decoration: none;
+    display: inline-block;
+    max-width: 100%;
+    line-height: pxtoem(23);
+    background-color: color('blue');
+    color: color('white');
+    width: auto;
+    content: 'Välj fil';
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    pointer-events: none;
+    z-index: z('overlay');
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    &:before {
+      background-color: color('grey', 'darker');
+    }
+
+    &:after {
+      border: solid 1px color('grey', 'dark');
+    }
+  }
+
+  &:active {
+    &:before {
+      box-shadow: inset 2px 2px 5px 0 rgba(50, 50, 50, 0.5);
+    }
+  }
+
+  [type="file"] {
+    width: 100%;
+    height: pxtoem(46,16);
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: z('overlay');
+    cursor: pointer;
   }
 }
 
@@ -143,8 +300,6 @@
 // styling of `<select>`, unless a `border` property is set.
 //
 // :disabled  - Disabled
-// .-error    - Error
-// .-success  - Success
 //
 // Markup: forms-select.twig
 //
@@ -157,14 +312,13 @@
   background-position: right 1.3rem center;
   background-repeat: no-repeat;
   width: 100%;
-  max-width: 35em;
+  max-width: pxtoem(614); // Width of 8 columns minus box-shadow compensation
 
   &:disabled,
   &.pseudo-class-disabled {
-    background-image: url('../images/svg/icon--arrows--dropdown--disabled.svg');
+    background-image: none;
     color: color('grey', 'light');
     background-color: color('grey', 'lighter');
-    box-shadow: 0 0 0 0 color('grey', 'lighter');
     top: 0;
     cursor: not-allowed;
   }
@@ -174,9 +328,6 @@
 //
 // If an `<input>` element has the `type='checkbox'` attribute set, the form
 // field is displayed as a checkbox.
-//
-// It's recommended that you don't attempt to style these elements. Firefox's
-// implementation doesn't respect `box-sizing`, `padding`, or `width`.
 //
 // Markup: forms-checkbox.twig
 //
@@ -193,7 +344,7 @@
 .c-form__checkboxes,
 .c-form__radios {
   padding: 0;
-  margin: 0;
+  margin: 0 0 1.5em;
   border: 0;
 }
 
@@ -203,6 +354,13 @@
   @extend %visually-hidden;
 
   + .c-form__label {
+    cursor: pointer;
+    line-height: 1.2;
+    padding: 0.7em 0.9em 0.7em 1.1em;
+    border-radius: 2em;
+    color: color('blue');
+    font-weight: 500;
+    background: color('white');
 
     &::before {
       background: white;
@@ -215,31 +373,24 @@
     }
   }
 
-  &:disabled + .c-form__label::before {
-    background: color('grey');
-    box-shadow: 0 0 0 1px color('grey');
-    cursor: not-allowed;
+  &:disabled + .c-form__label {
+    background: color('grey', 'light');
+    color: color('grey');
+    border-color: color('grey', 'light');
   }
 }
 
 .c-form__radio {
   + .c-form__label {
-    cursor: pointer;
-    border: 2px solid color('blue');
-    line-height: 1.2;
-    padding: 0.7em 0.7em 0.7em 0.9em;
-    color: color('blue');
-    font-weight: 500;
-    background: color('white');
 
     &::before {
       background: color('white');
       border-radius: 100%;
-      box-shadow: 0 0 0 4px color('white'), 0 0 0 6px color('blue');
+      box-shadow: 0 0 0 4px color('white'), 0 0 0 5px color('blue');
       content: '\a0';
       display: inline-block;
-      line-height: 0.2;
-      margin-right: 0.8em;
+      line-height: 0.3;
+      margin-right: 0.7em;
       text-indent: 0.15em;
       vertical-align: 0.2em;
       height: 0.7em;
@@ -258,49 +409,55 @@
     }
   }
 
+  &:disabled + .c-form__label::before {
+    background: color('grey');
+    box-shadow: 0 0 0 4px color('grey');
+    cursor: not-allowed;
+  }
+
   &.is-tabbed,
   &:focus,
   &:active {
     + .c-form__label {
-      box-shadow: 0 0 3px color('black'), 0 0 7px color('black');
+      box-shadow: 0 0 3px color('blue'), 0 0 7px color('blue');
     }
   }
 }
 
 .c-form__checkbox {
   + .c-form__label {
-    position: relative;
-    margin-left: 2px;
 
     &::before {
-      box-shadow: 0 0 0 2px color('black', 'tint');
+      box-shadow: 0 0 0 1px color('black', 'tint');
       color: color('blue');
       vertical-align: middle;
-      height: 0.9em;
-      width: 0.9em;
+      height: 0.7em;
+      width: 0.7em;
       font-size: 1.5em;
+      margin-right: 0.4em;
     }
   }
 
   &:checked + .c-form__label {
     &::before {
       background-image: url('../images/svg/icon--check.svg');
-      background-position: 50%;
       background-repeat: no-repeat;
       background-color: color('blue');
       box-shadow: 0 0 0 2px color('blue');
     }
   }
 
-  &:disabled + .c-form__label {
-    color: #5b616b;
+  &:disabled + .c-form__label::before {
+    background: color('grey');
+    box-shadow: 0 0 0 1px color('grey');
+    cursor: not-allowed;
   }
 
   &.is-tabbed,
   &:focus,
   &:active {
     + .c-form__label::before {
-      box-shadow: 0 0 0 2px color('blue'), 0 0 10px color('black');
+      box-shadow: 0 0 0 2px color('blue'), 0 0 10px color('blue');
     }
   }
 }
@@ -308,16 +465,25 @@
 
 // Error messages
 //
+// Can be customized based on what solution is being used for error messages.
+// Clientside validation can use libraries like [validatr](https://jaymorrow.github.io/validatr/).
+//
+// Error messages should make use of the `aria-describedby`-attribute to
+// indicate a connection between `input` and message. Can temporary replace the
+// input description.
+//
 // Markup: forms-error.twig
 //
 // Style guide: forms.errors
 .c-form__error {
-  color: color('red');
-  font-weight: bold;
+  background-color: color('red');
+  padding: 0.6em 1em 0.7em;
+  color: color('white');
   font-size: pxtoem(13);
+  max-width: pxtoem(619,13); // Width of 8 columns
 }
 
-.c-list--naked {
+.c-form__list {
   list-style: none;
 }
 
@@ -337,10 +503,14 @@
   border-bottom: 1px solid color('grey');
   position: relative;
 
-  .c-form__fieldset {
+  .c-fieldset {
     padding-top: 2em;
     border-bottom: 0;
     border-top: 1px solid color('grey');
+
+    &:last-child {
+      border-bottom: 0;
+    }
   }
 }
 
@@ -352,11 +522,56 @@
 }
 
 .c-fieldset__description {
-  text-align: center;
-  max-width: 35em;
-  margin: 0 auto 2.2em;
+  font-size: pxtoem(18);
+  line-height: 1.65;
+  margin: 0 0 2.2em;
 
   a {
     text-decoration: underline;
+  }
+}
+
+.c-form__submit {
+  @extend %button;
+  border: solid 1px color('blue');
+  background-color: color('blue');
+  color: color('white');
+
+  [class^="c-icon"] {
+    stroke: color('white');
+  }
+
+  &:hover,
+  &:focus,
+  a:hover,
+  a:focus {
+    border: solid 1px color('blue');
+    background-color: color('blue');
+    color: color('white');
+  }
+
+  &.-light {
+    border: solid 1px color('blue');
+    background-color: color('blue');
+
+    &:hover,
+    &:focus {
+      border: solid 1px color('blue');
+      background-color: color('blue');
+    }
+  }
+
+  .c-search & {
+    vertical-align: top; /* Compensating for input field having box-shadow on top. */
+    min-width: 0;
+    width: 32%;
+
+    @include respond-to('medium') {
+      width: 19%;
+    }
+  }
+
+  .c-search.-page & {
+    margin-top: 1.8em;
   }
 }

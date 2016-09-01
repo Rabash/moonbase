@@ -1,6 +1,5 @@
-.c-icon--menu {
+.c-icon-menu {
   float: right;
-  margin-left: 0.7em;
   display: block;
   position: relative;
   overflow: hidden;
@@ -14,7 +13,7 @@
     left: 0;
     right: 0;
     height: pxtoem(3);
-    background: color('grey', 'darker');
+    background: color('white');
     /* autoprefixer: off */
     transition: background 0s 0.15s;
 
@@ -25,7 +24,7 @@
       left: 0;
       width: 100%;
       height: pxtoem(3);
-      background-color: color('grey', 'darker');
+      background-color: color('white');
       content: '';
       /* autoprefixer: off */
       transition-duration: 0.15s, 0.15s;
@@ -46,7 +45,7 @@
   }
 
   // scss-lint:disable NestingDepth
-  .js-nav-active & {
+  [aria-expanded='true'] & {
     &__inner {
       background: transparent;
 

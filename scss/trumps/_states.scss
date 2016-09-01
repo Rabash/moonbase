@@ -1,8 +1,36 @@
-[aria-hidden='true'],
+// scss-lint:disable ImportantRule
+[aria-labelledby^='a11y-toggle'] {
+
+  &[aria-hidden='false'] {
+    max-height: pxtoem(500); /* approximate max height */
+    overflow-y: hidden;
+    transition-property: all;
+    transition-duration: 0.5s;
+  }
+
+  &[aria-hidden='true'] {
+    max-height: 0 !important;
+    overflow-y: hidden;
+    transition-property: all;
+    transition-duration: 0.5s;
+  }
+}
+
 [data-a11y-toggle]:not([aria-controls]) {
   display: none;
 }
 
 .is-tabbed {
   outline: 2px solid color('blue');
+  outline-offset: -2px !important;
+
+  &.c-bookmark {
+    outline: 0;
+
+    [class^='c-heading'] {
+      outline: 2px solid color('blue');
+      outline-offset: -2px !important;
+    }
+  }
 }
+// scss-lint:enable ImportantRule

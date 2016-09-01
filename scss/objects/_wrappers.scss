@@ -1,23 +1,58 @@
 // Wrapper
 //
-// En wrapper sätts som det yttersta elementet av en layout och sätter sidans bredd.
-// <br><em>(class: o-wrapper)</em>
+// Wrappers are used to limit the max-width of an element.
 //
 // Markup:
 // <div class="o-wrapper kss-wrapper">.o-wrapper</div>
 //
-// Style guide: wrappers
+// Style guide: grid.wrapper
 .o-wrapper {
   @extend %clearfix;
   box-sizing: content-box;
-  max-width: pxtoem(1280);
-  margin-right: auto;
-  margin-left: auto;
+  max-width: pxtoem(1282);
   position: relative;
-  padding-right: 5%;
-  padding-left: 5%;
+  margin-right: 5%;
+  margin-left: 5%;
 
   @include respond-to('medium') {
+    margin-right: 3%;
+    margin-left: 3%;
+  }
+
+  @include respond-to('xxxlarge') {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &.-masonry {
+    overflow: hidden;
+    box-sizing: border-box;
+
+    @include respond-to('medium') {
+      column-count: 2;
+      column-gap: pxtoem(20);
+    }
+
+    @include respond-to('large') {
+      column-count: 2;
+      column-gap: pxtoem(30);
+    }
+
+    @include respond-to('xlarge') {
+      column-count: 3;
+      column-gap: pxtoem(50);
+    }
+  }
+}
+
+.o-wrapper\@xlarge {
+  @include respond-to('xlarge') {
+    @include clearfix;
+    box-sizing: content-box;
+    max-width: pxtoem(1282);
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
     padding-right: 3%;
     padding-left: 3%;
   }
@@ -26,4 +61,9 @@
     padding-left: 0;
     padding-right: 0;
   }
+}
+
+.o-masonry {
+  display: inline-block;
+  width: 100%;
 }

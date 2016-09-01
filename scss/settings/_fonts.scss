@@ -1,55 +1,9 @@
-// Typsnitt
+// Fonts
+//
+// All fonts used on the website.
 //
 // Weight: -1
 //
-// Här listas typsnitten som används på webbplatsen.
-// <br><em>(category: fonts)</em>
-//
 // Style guide: fonts
-
-$veneer: 'veneerregular', Impact, Haettenschweiler, 'Franklin Gothic Bold', Charcoal, 'Helvetica Inserat', 'Bitstream Vera Sans Bold', 'Arial Black', 'sans serif';
-$helvetica: 'HelveticaNeueLTStd', Helvetica, Arial, "Nimbus Sans L", sans-serif;
-
-// Veneer
-//
-// Veneer är Fairtrades identitetstypsnitt som används främst till större rubriker och citat.
-//
-// Markup:
-//  <h1 style="font-family: 'veneerregular'" class="kss-font">Veneer</h1>
-//
-// Style guide: fonts.veneer
-@font-face {
-  font-family: 'veneerregular';
-  src: url('../fonts/veneer-webfont.woff2') format('woff2'),
-       url('../fonts/veneer-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-// Helvetica Neue
-//
-// Helvetica Neue används till all text på webbplatsen som inte är stora rubriker och citat, exempelvis brödtext och mindre rubriker.
-//
-// .-bold         - Bold
-// .-italic       - Italic
-// .-bold.-italic - Bold italic
-//
-// Markup:
-//  <div style="font-family: 'HelveticaNeueLTStd'" class="kss-font {{modifier_class}}">Helvetica Neue</div>
-//
-// Style guide: fonts.helveticaneue
-@font-face {
-  font-family: 'HelveticaNeueLTStd';
-  src: url('../fonts/HelveticaNeueLTStdRoman.woff2') format('woff2'),
-       url('../fonts/HelveticaNeueLTStdRoman.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'HelveticaNeueLTStd';
-  src: url('../fonts/HelveticaNeueLTStdBd.woff2') format('woff2'),
-       url('../fonts/HelveticaNeueLTStdBd.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-}
+$tahoma: Tahoma, Verdana, Segoe, sans-serif;
+$georgia: Georgia, Times, "Times New Roman", serif;

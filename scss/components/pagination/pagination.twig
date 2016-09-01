@@ -1,5 +1,31 @@
-<nav class="o-row c-pagination u-clearfix">
-   <h2 class="u-visually-hidden">Post navigation</h2>
-   <a href="#" class="c-pagination__previous">Older posts</a>
-   <a href="#" class="c-pagination__next">Newer posts</a>
+<nav class="o-row c-pager" aria-labelledby="pagination-heading">
+  <h4 id="pagination-heading" class="u-visually-hidden">Pagination</h4>
+  <ul class="c-pager__items js-pager__items">
+    <li class="c-pager__item -active">
+      <a href="#" title="Nuvarande sida">
+        <span class="u-visually-hidden">
+          Nuvarande sida
+        </span>1
+      </a>
+    </li>
+    <li class="c-pager__item">
+      <a href="?page=1" title="Go to page 2">
+        <span class="u-visually-hidden">
+          Sida
+        </span>2
+      </a>
+    </li>
+    <li class="c-pager__item -next">
+      <a href="#" title="Gå till nästa sida" rel="next">
+        <span class="u-visually-hidden">Nästa sida</span>
+        <span aria-hidden="true">Nästa ›</span>
+      </a>
+    </li>
+    <li class="c-pager__item -last">
+      <a href="#" title="Gå till sista sidan">
+        <span class="u-visually-hidden">Sista sidan</span>
+        <span aria-hidden="true">Sista »</span>
+      </a>
+    </li>
+  </ul>
 </nav>

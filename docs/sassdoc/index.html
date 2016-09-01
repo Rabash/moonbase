@@ -41,8 +41,9 @@
   &#39;medium&#39;: (min-width: pxtoem(550)),
   &#39;large&#39;: (min-width: pxtoem(768)),
   &#39;xlarge&#39;: (min-width: pxtoem(1024)),
-  &#39;xxlarge&#39;: (min-width: pxtoem(1240)),
+  &#39;xxlarge&#39;: (min-width: pxtoem(1200)),
   &#39;xxxlarge&#39;: (min-width: pxtoem(1350)),
+  &#39;small-medium&#39;: &#39;(min-width: #{pxtoem(360,16)}) and (max-width: #{pxtoem(549,16)})&#39;,
   &#39;medium-large&#39;: &#39;(min-width: #{pxtoem(550,16)}) and (max-width: #{pxtoem(767,16)})&#39;,
   &#39;medium-xlarge&#39;: &#39;(min-width: #{pxtoem(550,16)}) and (max-width: #{pxtoem(1023,16)})&#39;,
   &#39;large-xlarge&#39;: &#39;(min-width: #{pxtoem(768,16)}) and (max-width: #{pxtoem(1023,16)})&#39;,
@@ -51,34 +52,32 @@
   &#39;xsmall-xlarge&#39;: (max-width: pxtoem(1023)),
 );</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Map of breakpoints for responsive design.</p></div><h3 class="item__sub-heading">Type</h3><p><code>Map</code></p><h3 class="item__sub-heading">Map structure</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">Map key</span>Name</th><th scope="col"><span class="visually-hidden">Map key</span>Description</th><th scope="col"><span class="visually-hidden">Map key</span>Type</th><th scope="col"><span class="visually-hidden">Map key</span>Value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>small</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default"><code>(max-width: 360px)</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>medium</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default"><code>(min-width: 550px)</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>large</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default"><code>(min-width: 768px)</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>xlarge</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default"><code>(min-width: 1024px)</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>xxlarge</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default"><code>(min-width: 1240px)</code></td></tr></tbody></table><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-respond-to"><code>respond-to</code></a></li></ul><h3 class="item__sub-heading">See</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-respond-to"><code>respond-to</code></a></li></ul></section><section class="main__item container item" id="undefined-variable-colors"><h3 class="item__heading"><a class="item__name" href="#variable-colors">colors</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$colors: (
   &#39;black&#39;: (
-    base: #1e1e1e
+    base: #1b1b1b
   ),
   &#39;white&#39;: (
-    base: #fdfdfd
-  ),
-  &#39;pink&#39;: (
-    base: #e0119d,
-    dark: #b8007c
+    base: #fff
   ),
   &#39;grey&#39;: (
-    lightest: #f6f6f6,
-    lighter: #ebebeb,
-    light: #d8d8d8,
-    base: #cbcbcb,
-    dark: #9b9b9b,
-    darker: #575757
-  ),
-  &#39;purple&#39;: (
-    base: #80379b
+    lighter: #f4f4f4,
+    light: #d9d9d9,
+    base: #a8a8a7,
+    dark: #676767,
+    darker: #333
   ),
   &#39;blue&#39;: (
-    base: #00b9e4
+    base: #4484ce // Links
   ),
   &#39;red&#39;: (
-    base: #e00034,
+    base: #e00034
   ),
   &#39;green&#39;: (
-    base: #bed600
+    base: #9dba64
+  ),
+  &#39;yellow&#39;: (
+    base: #f9cf00
+  ),
+  &#39;purple&#39;: (
+    base: #94618e // Visited links
   )
 );</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Map of colors.</p></div><h3 class="item__sub-heading">Type</h3><p><code>Map</code></p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-color"><code>color</code></a></li></ul><h3 class="item__sub-heading">See</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#function-color"><code>color</code></a></li></ul></section><section class="main__item container item" id="undefined-variable-root-font-size"><h3 class="item__heading"><a class="item__name" href="#variable-root-font-size">root-font-size</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$root-font-size: 16;</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Root font size defaults to 16.</p></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#undefined-function-pxtoem"><code>pxtoem</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#undefined-function-remcalc"><code>remcalc</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-rem"><code>rem</code></a></li></ul></section><section class="main__item container item" id="undefined-variable-grid"><h3 class="item__heading"><a class="item__name" href="#variable-grid">grid</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$grid: (
   2: (
@@ -86,20 +85,21 @@
     column: 48.5%
   ),
   3: (
-    gutter: 1.5625%,
-    column: 6.8984375%
+    gutter: 3.90015%,
+    column: 4.758%
   ),
   4: (
-    gutter: 1.5625%,
-    column: 6.8984375%
+    gutter: 3.90015%,
+    column: 4.758%
   ),
   12: (
-    gutter: 1.5625%,
-    column: 6.8984375%
+    gutter: 3.90015%,
+    column: 4.758%
   )
 );</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Map of grid columns.</p></div><h3 class="item__sub-heading">Type</h3><p><code>Map</code></p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-grid"><code>grid</code></a></li></ul><h3 class="item__sub-heading">See</h3><ul class="list-unstyled"><li><span class="item__cross-type">[variable]</span> <a href="#variable-grid"><code>grid</code></a></li></ul></section><section class="main__item container item" id="undefined-variable-z-layers"><h3 class="item__heading"><a class="item__name" href="#variable-z-layers">z-layers</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$z-layers: (
   below     : -1,
   default   : 1,
+  above     : 2,
   modal     : 9000,
   overlay   : 8000,
   dropdown  : 7000,
