@@ -78,7 +78,7 @@ html {
           border: 0; } }
 
 .kss-nav__menu-link {
-  transition: all 0.2s ease-in-out;
+  transition: all 0.15s ease-in-out;
   display: inline-block;
   padding: 0.2em 0.25em;
   color: currentColor; }
@@ -96,7 +96,7 @@ html {
       opacity: 0.8; }
 
 .kss-nav__ref {
-  transition: all 0.2s ease-in-out;
+  transition: all 0.15s ease-in-out;
   font-weight: bold;
   opacity: 0.2;
   margin-right: 0.3em; }
@@ -113,7 +113,7 @@ html {
     opacity: 0.6; }
 
 .kss-title__permalink-hash {
-  transition: all 0.2s ease-in-out;
+  transition: all 0.15s ease-in-out;
   opacity: 0;
   margin-left: 0.5em;
   text-decoration: none; }
@@ -209,6 +209,20 @@ html {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   text-align: center; }
+
+[class^="kss-icon"] {
+  width: 2.25em;
+  height: 2.25em;
+  margin: 0 1em 1em 0; }
+  [class^="kss-icon"]:after {
+    content: attr(data-kss);
+    display: inline-block; }
+
+.kss-icon--fill {
+  fill: #666; }
+
+.kss-icon--stroke {
+  stroke: #666; }
 
 .c-body p:last-child {
   margin-bottom: 1.6em !important; }

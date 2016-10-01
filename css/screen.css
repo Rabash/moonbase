@@ -702,7 +702,7 @@ blockquote {
 .c-form__password.-error:not(.c-form__select),
 .c-form__text.-error:not(.c-form__select),
 .c-form__textarea.-error:not(.c-form__select) {
-  background-image: url("../images/svg/icon--warning.svg");
+  background-image: url("../images/svg/icon-warning.svg");
   background-repeat: no-repeat;
   background-position: right 0.6em center;
   background-size: 20px 20px;
@@ -849,7 +849,7 @@ blockquote {
 
 .c-form__select {
   cursor: pointer;
-  background-image: url("../images/svg/icon--arrows--dropdown.svg");
+  background-image: url("../images/svg/form-dropdown.svg");
   background-size: 0.5625em 1.4375em;
   background-position: right 1.3rem center;
   background-repeat: no-repeat;
@@ -955,7 +955,7 @@ blockquote {
 }
 
 .c-form__checkbox:checked + .c-form__label::before {
-  background-image: url("../images/svg/icon--check.svg");
+  background-image: url("../images/svg/form-check.svg");
   background-repeat: no-repeat;
   background-color: #4484ce;
   -webkit-box-shadow: 0 0 0 2px #4484ce;
@@ -1280,6 +1280,41 @@ blockquote {
   text-align: right;
   color: #a8a8a7;
   line-height: 1em;
+}
+
+.c-message {
+  padding: 1em 2em 1em 4em;
+  color: #1b1b1b;
+  background-color: #e0e9ce;
+  border: 2px solid #9dba64;
+  background-image: url("../images/svg/icon-status.svg");
+  background-repeat: no-repeat;
+  background-position: 1.2em center;
+  font-size: 1.125em;
+  background-size: 2em 2em;
+}
+
+.c-message a {
+  color: #1b1b1b;
+  text-decoration: underline;
+}
+
+.c-message a:hover,
+.c-message a:focus,
+.c-message a:active {
+  text-decoration: none;
+}
+
+.c-message.-warning {
+  background-color: #fff5c6;
+  border-color: #f9cf00;
+  background-image: url("../images/svg/icon-warning.svg");
+}
+
+.c-message.-error {
+  background-color: #ffe0e7;
+  border-color: #e00034;
+  background-image: url("../images/svg/icon-error.svg");
 }
 
 [class$="__menu"] {

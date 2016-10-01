@@ -1,0 +1,39 @@
+// Messages
+//
+// Markup: messages.twig
+//
+// Style guide: messages
+.c-message {
+  padding: 1em 2em 1em 4em;
+  color: color('black');
+  background-color: lighten( color('green'), 30% );
+  border: 2px solid color('green');
+  background-image: url('../images/svg/icon-status.svg');
+  background-repeat: no-repeat;
+  background-position: 1.2em center;
+  font-size: pxtoem(18);
+  background-size: pxtoem(32) pxtoem(32);
+
+  a {
+    color: color('black');
+    text-decoration: underline;
+
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: none;
+    }
+  }
+
+  &.-warning {
+    background-color: lighten( color('yellow'), 40% );
+    border-color: color('yellow');
+    background-image: url('../images/svg/icon-warning.svg');
+  }
+
+  &.-error {
+    background-color: lighten( color('red'), 50% );
+    border-color: color('red');
+    background-image: url('../images/svg/icon-error.svg');
+  }
+}

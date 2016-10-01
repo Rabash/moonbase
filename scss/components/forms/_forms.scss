@@ -162,7 +162,7 @@
     max-width: pxtoem(612); // Width of 8 columns minus box-shadow compensation
 
     &:not(.c-form__select) {
-      background-image: url('../images/svg/icon--warning.svg');
+      background-image: url('../images/svg/icon-warning.svg');
       background-repeat: no-repeat;
       background-position: right 0.6em center;
       background-size: 20px 20px;
@@ -305,7 +305,7 @@
 .c-form__select {
   @extend %form--element;
   cursor: pointer;
-  background-image: url('../images/svg/icon--arrows--dropdown.svg');
+  background-image: url('../images/svg/form-dropdown.svg');
   background-size: pxtoem(9) pxtoem(23);
   background-position: right 1.3rem center;
   background-repeat: no-repeat;
@@ -438,7 +438,7 @@
 
   &:checked + .c-form__label {
     &::before {
-      background-image: url('../images/svg/icon--check.svg');
+      background-image: url('../images/svg/form-check.svg');
       background-repeat: no-repeat;
       background-color: color('blue');
       box-shadow: 0 0 0 2px color('blue');

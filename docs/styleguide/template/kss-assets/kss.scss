@@ -288,6 +288,25 @@ html {
   text-align: center;
 }
 
+[class^="kss-icon"] {
+  width: pxtoem(36);
+  height: pxtoem(36);
+  margin: 0 1em 1em 0;
+
+  &:after {
+    content: attr(data-kss);
+    display: inline-block;
+  }
+}
+
+.kss-icon--fill {
+  fill: #666;
+}
+
+.kss-icon--stroke {
+  stroke: #666;
+}
+
 .c-body p:last-child {
   margin-bottom: 1.6em !important;
 }
