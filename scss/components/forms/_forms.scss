@@ -35,8 +35,6 @@
 //
 // Wrapper for a form element (or group of form elements) and its label.
 //
-// .-error  - Highlight the form elements that caused a form submission error.
-//
 // Markup: form-item.twig
 //
 // Style guide: forms.form-item
@@ -244,7 +242,7 @@
     @include transition;
     font-weight: bold;
     font-size: pxtoem(16);
-    padding: 1em 1.2em 0.6em;
+    padding: 0.9em 1.2em 0.6em;
     border-radius: 0 pxtoem(5) pxtoem(5) 0;
     text-decoration: none;
     display: inline-block;
@@ -317,8 +315,8 @@
   &:disabled,
   &.pseudo-class-disabled {
     background-image: none;
-    color: color('grey', 'light');
-    background-color: color('grey', 'lighter');
+    color: color('grey');
+    background-color: color('grey', 'light');
     top: 0;
     cursor: not-allowed;
   }

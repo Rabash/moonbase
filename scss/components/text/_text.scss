@@ -161,4 +161,28 @@
   @include respond-to('xlarge') {
     font-size: pxtoem(22);
   }
+
+  a {
+    @include transition;
+    color: color('grey', 'dark');
+    border-bottom: solid 0.08em color('blue');
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: color('blue');
+      border-bottom-color: color('blue');
+    }
+
+    &:visited {
+      border-bottom-color: color('purple');
+    }
+
+    &:hover:visited,
+    &:focus:visited,
+    &:active:visited {
+      color: color('purple');
+    }
+  }
 }

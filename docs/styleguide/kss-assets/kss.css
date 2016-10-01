@@ -1,21 +1,3 @@
-@font-face {
-  font-family: 'ITCBaileySansW01-Book';
-  src: url("../fonts/47c763ea-084a-46ab-99aa-d4f5f0448a9a.woff2") format("woff2"), url("../fonts/d4dcda7c-1162-4849-86ad-8c3710687c10.woff") format("woff"), url("../fonts/50ba5770-1aa2-45e7-a006-4ed5680dd0e0.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'ITCBaileySansW01-Bold';
-  src: url("../fonts/7e4132c8-ead5-4aca-8bd4-4cf997fa7405.woff2") format("woff2"), url("../fonts/251f4b6b-9fff-4d66-9ff9-3ca5d90f3db1.woff") format("woff"), url("../fonts/3dbdb32e-fd26-4fb5-b2cf-76c683938317.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'SabonETW01-Roman';
-  src: url("../fonts/ef12a52c-a47f-49fe-b5bb-ee15aa7b5377.woff2") format("woff2"), url("../fonts/13b0a4ee-3238-4837-bb6e-162ae2990401.woff") format("woff"), url("../fonts/39085db1-1140-43b6-bd13-a6f8a8d99ea7.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal; }
-
 .kss-modifier__heading {
   width: 1px;
   height: 1px;
@@ -148,6 +130,9 @@ html {
 .kss-markup {
   border: 2px solid #e6e6e6; }
 
+.kss-markup {
+  font-size: 1.8em; }
+
 .kss-modifier {
   border-bottom: 1px solid #ebebeb;
   padding: 2em;
@@ -227,102 +212,3 @@ html {
 
 .c-body p:last-child {
   margin-bottom: 1.6em !important; }
-
-/* Pretty printing styles. Used with prettify.js. */
-.prettyprint {
-  margin: 0; }
-
-/* SPAN elements with the classes below are added by prettyprint. */
-.pln {
-  color: #000; }
-
-/* plain text */
-.str {
-  color: #080; }
-
-/* string content */
-.kwd {
-  color: #008; }
-
-/* a keyword */
-.com {
-  color: #800; }
-
-/* a comment */
-.typ {
-  color: #606; }
-
-/* a type name */
-.lit {
-  color: #066; }
-
-/* a literal value */
-/* punctuation, lisp open bracket, lisp close bracket */
-.pun, .opn, .clo {
-  color: #660; }
-
-.tag {
-  color: #008; }
-
-/* a markup tag name */
-.atn {
-  color: #606; }
-
-/* a markup attribute name */
-.atv {
-  color: #080; }
-
-/* a markup attribute value */
-.dec, .var {
-  color: #606; }
-
-/* a declaration; a variable name */
-.fun {
-  color: red; }
-
-/* a function name */
-/* Use higher contrast and text-weight for printable form. */
-@media print, projection {
-  .str {
-    color: #060; }
-  .kwd {
-    color: #006;
-    font-weight: bold; }
-  .com {
-    color: #600;
-    font-style: italic; }
-  .typ {
-    color: #404;
-    font-weight: bold; }
-  .lit {
-    color: #044; }
-  .pun, .opn, .clo {
-    color: #440; }
-  .tag {
-    color: #006;
-    font-weight: bold; }
-  .atn {
-    color: #404; }
-  .atv {
-    color: #060; } }
-
-/* Specify class=linenums on a pre to get line numbering */
-ol.linenums {
-  margin: 0;
-  padding: 0 0 3px 0;
-  list-style-type: none;
-  /* Alternate shading for lines */ }
-  ol.linenums li {
-    min-height: 1.6em;
-    line-height: 1.6;
-    border-bottom: 1px solid #eee;
-    padding: 0 10px;
-    background: #fff; }
-    ol.linenums li:first-child {
-      padding-top: 3px; }
-  ol.linenums li.L0,
-  ol.linenums li.L2,
-  ol.linenums li.L4,
-  ol.linenums li.L6,
-  ol.linenums li.L8 {
-    background: #fcfcfc; }

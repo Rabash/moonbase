@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width">
 
   <link rel="stylesheet" href="kss-assets/kss.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/monokai-sublime.min.css">
   <link rel="stylesheet" href="../../css/screen.css">
 
 </head>
@@ -16,8 +17,7 @@
 
 <div class="kss-sidebar kss-style">
   <header class="kss-header">
-    <a href="index.html"><img src="../../images/png/logo.png" alt="" class="kss-logo" /></a>
-    <h1 class="kss-doc-title">Style Guide</h1>
+    <h1 class="kss-doc-title"><a href="index.html">Style Guide</a></h1>
   </header>
   <nav class="kss-nav">
     <ul class="kss-nav__menu">
@@ -78,11 +78,6 @@
         </a>
               </li>
           <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-navigation.html">
-          <span class="kss-nav__ref">10</span><span class="kss-nav__name">Menus</span>
-        </a>
-              </li>
-          <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="section-pagination.html">
           <span class="kss-nav__ref">11</span><span class="kss-nav__name">Pagination</span>
         </a>
@@ -138,10 +133,6 @@
         
               </div>
 
-      
-              <div class="kss-source kss-style">
-          Source: <code>components/tabs/_tabs.scss</code>, line 1
-        </div>
           </div>
           <section id="kssref-tabs-tabs" class="kss-section kss-section--depth-2">
       <div class="kss-style">
@@ -188,8 +179,10 @@
 
                   </div>
                   <button data-a11y-toggle="kss-markup-tabs-tabs" class="kss-markup__button">Code</button>
-          <div class="kss-markup kss-style" id="kss-markup-tabs-tabs">
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;o-row o-9-12@large u-center@large-xlarge o-2-left@xxlarge o-8-12@xlarge o-7-12@xxlarge u-left@xlarge&quot;&gt;
+
+          <div id="kss-markup-tabs-tabs">
+                      <div class="kss-markup kss-style">
+              <pre><code class="html">&lt;div class=&quot;o-row o-9-12@large u-center@large-xlarge o-2-left@xxlarge o-8-12@xlarge o-7-12@xxlarge u-left@xlarge&quot;&gt;
   &lt;nav class=&quot;c-tabs&quot; aria-label=&quot;Flikar&quot;&gt;
     &lt;h2 class=&quot;u-visually-hidden&quot;&gt;Primära flikar&lt;/h2&gt;
     &lt;ul class=&quot;c-tabs__items -primary&quot;&gt;&lt;li class=&quot;c-tabs__item -active&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;is-active&quot;&gt;Visa&lt;span class=&quot;u-visually-hidden&quot;&gt;(aktiv flik)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
@@ -199,26 +192,22 @@
   &lt;/nav&gt;
 &lt;/div&gt;
 </code></pre>
-          </div>
-              
-              <div class="kss-source kss-style">
-          Source: <code>components/tabs/_tabs.scss</code>, line 5
-        </div>
+            </div>
+          
+                      <div class="kss-source kss-style">
+              Source: <code>components/tabs/_tabs.scss</code>, line 5
+            </div>
+                    </div>
+        
           </section>
   </article>
 
 <!-- SCRIPTS -->
 <script src="kss-assets/kss.js"></script>
 <script src="kss-assets/scrollspy.js"></script>
-<script src="kss-assets/prettify.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 <script src="../../js/min/script.min.js"></script>
-<script>
-  prettyPrint();
-  var spy = new ScrollSpy('#kss-node', {
-    nav: '.kss-nav__menu-child > li > a',
-    className: 'is-in-viewport'
-  });
-</script>
 
 
 <!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->

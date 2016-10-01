@@ -87,7 +87,7 @@
 /// @param {String} $transition-property [all] - The transition you want
 /// @param {String} $transition-time [0.4s] - The length of the transition in seconds
 /// @param {String} $method [ease-in-out] - Transition method
-@mixin transition($transition-property: all, $transition-time: 0.2s, $method: ease-in-out) {
+@mixin transition($transition-property: all, $transition-time: 0.15s, $method: ease-in-out) {
   transition: $transition-property $transition-time $method;
 }
 

@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width">
 
   <link rel="stylesheet" href="kss-assets/kss.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/monokai-sublime.min.css">
   <link rel="stylesheet" href="../../css/screen.css">
 
 </head>
@@ -16,8 +17,7 @@
 
 <div class="kss-sidebar kss-style">
   <header class="kss-header">
-    <a href="index.html"><img src="../../images/png/logo.png" alt="" class="kss-logo" /></a>
-    <h1 class="kss-doc-title">Style Guide</h1>
+    <h1 class="kss-doc-title"><a href="index.html">Style Guide</a></h1>
   </header>
   <nav class="kss-nav">
     <ul class="kss-nav__menu">
@@ -101,11 +101,6 @@
           <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="section-navigation.html">
           <span class="kss-nav__ref">10</span><span class="kss-nav__name">Navigation</span>
-        </a>
-              </li>
-          <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-navigation.html">
-          <span class="kss-nav__ref">10</span><span class="kss-nav__name">Menus</span>
         </a>
               </li>
           <li class="kss-nav__menu-item">
@@ -206,8 +201,10 @@ the available size at breakpoints large and up.</p>
 
                   </div>
                   <button data-a11y-toggle="kss-markup-grid" class="kss-markup__button">Code</button>
-          <div class="kss-markup kss-style" id="kss-markup-grid">
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;o-wrapper kss-wrapper&quot;&gt;
+
+          <div id="kss-markup-grid">
+                      <div class="kss-markup kss-style">
+              <pre><code class="html">&lt;div class=&quot;o-wrapper kss-wrapper&quot;&gt;
  &lt;h2 class=&quot;c-heading-b -margin-small&quot;&gt;8/12 and 4/12 width at breakpoint large:&lt;/h2&gt;
  &lt;div class=&quot;o-row -small kss-row&quot;&gt;
    &lt;div class=&quot;o-8-12@large u-left@large kss-grid&quot;&gt;&lt;code&gt;.o-8-12@large .u-left@large&lt;/code&gt;&lt;/div&gt;
@@ -234,11 +231,13 @@ the available size at breakpoints large and up.</p>
  &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-          </div>
-              
-              <div class="kss-source kss-style">
-          Source: <code>objects/_grid.scss</code>, line 1
-        </div>
+            </div>
+          
+                      <div class="kss-source kss-style">
+              Source: <code>objects/_grid.scss</code>, line 1
+            </div>
+                    </div>
+        
           </div>
           <section id="kssref-grid-row" class="kss-section kss-section--depth-2">
       <div class="kss-style">
@@ -287,8 +286,10 @@ the available size at breakpoints large and up.</p>
 
                   </div>
                   <button data-a11y-toggle="kss-markup-grid-row" class="kss-markup__button">Code</button>
-          <div class="kss-markup kss-style" id="kss-markup-grid-row">
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;o-wrapper kss-wrapper&quot;&gt;
+
+          <div id="kss-markup-grid-row">
+                      <div class="kss-markup kss-style">
+              <pre><code class="html">&lt;div class=&quot;o-wrapper kss-wrapper&quot;&gt;
  &lt;div class=&quot;o-row kss-row&quot;&gt;
   &lt;code&gt;.o-row&lt;/code&gt;&lt;br/&gt;This is a regular row. Margin at bottom.
  &lt;/div&gt;
@@ -300,11 +301,13 @@ the available size at breakpoints large and up.</p>
  &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-          </div>
-              
-              <div class="kss-source kss-style">
-          Source: <code>objects/_row.scss</code>, line 1
-        </div>
+            </div>
+          
+                      <div class="kss-source kss-style">
+              Source: <code>objects/_row.scss</code>, line 1
+            </div>
+                    </div>
+        
           </section>
           <section id="kssref-grid-row-faux" class="kss-section kss-section--depth-3">
       <div class="kss-style">
@@ -355,8 +358,10 @@ Always consider using a row above the element instead of a faux row.</p>
 
                   </div>
                   <button data-a11y-toggle="kss-markup-grid-row-faux" class="kss-markup__button">Code</button>
-          <div class="kss-markup kss-style" id="kss-markup-grid-row-faux">
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;o-wrapper kss-wrapper&quot;&gt;
+
+          <div id="kss-markup-grid-row-faux">
+                      <div class="kss-markup kss-style">
+              <pre><code class="html">&lt;div class=&quot;o-wrapper kss-wrapper&quot;&gt;
  &lt;div class=&quot;o-row o-faux-row kss-row&quot;&gt;
   &lt;code&gt;.o-row.o-faux-row&lt;/code&gt;&lt;br/&gt;This is a regular row. Padding at top.
  &lt;/div&gt;
@@ -368,11 +373,13 @@ Always consider using a row above the element instead of a faux row.</p>
  &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-          </div>
-              
-              <div class="kss-source kss-style">
-          Source: <code>objects/_row.scss</code>, line 46
-        </div>
+            </div>
+          
+                      <div class="kss-source kss-style">
+              Source: <code>objects/_row.scss</code>, line 46
+            </div>
+                    </div>
+        
           </section>
           <section id="kssref-grid-trumps" class="kss-section kss-section--depth-2">
       <div class="kss-style">
@@ -462,10 +469,6 @@ The <code>@</code>-sign is used to determine at what breakpoint this grid is use
                       </ul>
                         </div>
 
-      
-              <div class="kss-source kss-style">
-          Source: <code>trumps/_grid.scss</code>, line 1
-        </div>
           </section>
           <section id="kssref-grid-wrapper" class="kss-section kss-section--depth-2">
       <div class="kss-style">
@@ -503,28 +506,26 @@ The <code>@</code>-sign is used to determine at what breakpoint this grid is use
 
                   </div>
                   <button data-a11y-toggle="kss-markup-grid-wrapper" class="kss-markup__button">Code</button>
-          <div class="kss-markup kss-style" id="kss-markup-grid-wrapper">
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;o-wrapper kss-wrapper&quot;&gt;.o-wrapper&lt;/div&gt;</code></pre>
-          </div>
-              
-              <div class="kss-source kss-style">
-          Source: <code>objects/_wrappers.scss</code>, line 1
-        </div>
+
+          <div id="kss-markup-grid-wrapper">
+                      <div class="kss-markup kss-style">
+              <pre><code class="html">&lt;div class=&quot;o-wrapper kss-wrapper&quot;&gt;.o-wrapper&lt;/div&gt;</code></pre>
+            </div>
+          
+                      <div class="kss-source kss-style">
+              Source: <code>objects/_wrappers.scss</code>, line 1
+            </div>
+                    </div>
+        
           </section>
   </article>
 
 <!-- SCRIPTS -->
 <script src="kss-assets/kss.js"></script>
 <script src="kss-assets/scrollspy.js"></script>
-<script src="kss-assets/prettify.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 <script src="../../js/min/script.min.js"></script>
-<script>
-  prettyPrint();
-  var spy = new ScrollSpy('#kss-node', {
-    nav: '.kss-nav__menu-child > li > a',
-    className: 'is-in-viewport'
-  });
-</script>
 
 
 <!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->

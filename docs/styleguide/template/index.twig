@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width">
 
   <link rel="stylesheet" href="kss-assets/kss.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/monokai-sublime.min.css">
   {{ styles|raw }}
 </head>
 <body id="kss-node">
@@ -140,18 +141,24 @@
             </div>
           {% endfor %}
         </div>
-        {% if section.markup %}
+        {% if section.markup or section.sourceFile.name %}
           <button data-a11y-toggle="kss-markup-{{ section.referenceURI }}" class="kss-markup__button">Code</button>
-          <div class="kss-markup kss-style" id="kss-markup-{{ section.referenceURI }}">
-            <pre class="prettyprint linenums lang-html"><code data-language="html">{{ section.markup|escape('html') }}</code></pre>
+
+          <div id="kss-markup-{{ section.referenceURI }}">
+          {% if section.markup %}
+            <div class="kss-markup kss-style">
+              <pre><code class="html">{{ section.markup|escape('html') }}</code></pre>
+            </div>
+          {% endif %}
+
+          {% if section.sourceFile.name %}
+            <div class="kss-source kss-style">
+              Source: <code>{{ section.sourceFile.name }}</code>, line {{ section.sourceFile.line }}
+            </div>
+          {% endif %}
           </div>
         {% endif %}
-      {% endif %}
 
-      {% if section.sourceFile.name %}
-        <div class="kss-source kss-style">
-          Source: <code>{{ section.sourceFile.name }}</code>, line {{ section.sourceFile.line }}
-        </div>
       {% endif %}
     </{{ sectionElement }}>
   {% endfor %}
@@ -161,15 +168,9 @@
 <!-- SCRIPTS -->
 <script src="kss-assets/kss.js"></script>
 <script src="kss-assets/scrollspy.js"></script>
-<script src="kss-assets/prettify.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 <script src="../../js/min/script.min.js"></script>
-<script>
-  prettyPrint();
-  var spy = new ScrollSpy('#kss-node', {
-    nav: '.kss-nav__menu-child > li > a',
-    className: 'is-in-viewport'
-  });
-</script>
 {{ scripts|raw }}
 
 <!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->

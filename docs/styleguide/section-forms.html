@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width">
 
   <link rel="stylesheet" href="kss-assets/kss.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/monokai-sublime.min.css">
   <link rel="stylesheet" href="../../css/screen.css">
 
 </head>
@@ -16,8 +17,7 @@
 
 <div class="kss-sidebar kss-style">
   <header class="kss-header">
-    <a href="index.html"><img src="../../images/png/logo.png" alt="" class="kss-logo" /></a>
-    <h1 class="kss-doc-title">Style Guide</h1>
+    <h1 class="kss-doc-title"><a href="index.html">Style Guide</a></h1>
   </header>
   <nav class="kss-nav">
     <ul class="kss-nav__menu">
@@ -146,11 +146,6 @@
         </a>
               </li>
           <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-navigation.html">
-          <span class="kss-nav__ref">10</span><span class="kss-nav__name">Menus</span>
-        </a>
-              </li>
-          <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="section-pagination.html">
           <span class="kss-nav__ref">11</span><span class="kss-nav__name">Pagination</span>
         </a>
@@ -204,10 +199,6 @@
         
               </div>
 
-      
-              <div class="kss-source kss-style">
-          Source: <code>components/forms/_forms.scss</code>, line 1
-        </div>
           </div>
           <section id="kssref-forms-checkboxes" class="kss-section kss-section--depth-2">
       <div class="kss-style">
@@ -267,8 +258,10 @@ field is displayed as a checkbox.</p>
 
                   </div>
                   <button data-a11y-toggle="kss-markup-forms-checkboxes" class="kss-markup__button">Code</button>
-          <div class="kss-markup kss-style" id="kss-markup-forms-checkboxes">
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;fieldset class=&quot;c-form__checkboxes&quot;&gt;
+
+          <div id="kss-markup-forms-checkboxes">
+                      <div class="kss-markup kss-style">
+              <pre><code class="html">&lt;fieldset class=&quot;c-form__checkboxes&quot;&gt;
   &lt;legend&gt;&lt;span class=&quot;c-form__label&quot;&gt;Weekdays&lt;/span&gt;&lt;/legend&gt;
     &lt;ul class=&quot;c-form__list&quot;&gt;
       &lt;li class=&quot;c-form__item -checkbox&quot;&gt;
@@ -290,11 +283,13 @@ field is displayed as a checkbox.</p>
     &lt;/ul&gt;
 &lt;/fieldset&gt;
 </code></pre>
-          </div>
-              
-              <div class="kss-source kss-style">
-          Source: <code>components/forms/_forms.scss</code>, line 327
-        </div>
+            </div>
+          
+                      <div class="kss-source kss-style">
+              Source: <code>components/forms/_forms.scss</code>, line 325
+            </div>
+                    </div>
+        
           </section>
           <section id="kssref-forms-description" class="kss-section kss-section--depth-2">
       <div class="kss-style">
@@ -339,18 +334,22 @@ indicate a connection between <code>input</code> and description.</p>
 
                   </div>
                   <button data-a11y-toggle="kss-markup-forms-description" class="kss-markup__button">Code</button>
-          <div class="kss-markup kss-style" id="kss-markup-forms-description">
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;c-form__item&quot;&gt;
+
+          <div id="kss-markup-forms-description">
+                      <div class="kss-markup kss-style">
+              <pre><code class="html">&lt;div class=&quot;c-form__item&quot;&gt;
   &lt;label class=&quot;c-form__label&quot; for=&quot;text&quot;&gt;Username&lt;/label&gt;
   &lt;input type=&quot;text&quot; class=&quot;c-form__text&quot; id=&quot;text&quot; aria-labelledby=&quot;text-description&quot; /&gt;
   &lt;small class=&quot;c-form__description&quot; id=&quot;text-description&quot;&gt;Pick a username.&lt;/small&gt;
 &lt;/div&gt;
 </code></pre>
-          </div>
-              
-              <div class="kss-source kss-style">
-          Source: <code>components/forms/_forms.scss</code>, line 96
-        </div>
+            </div>
+          
+                      <div class="kss-source kss-style">
+              Source: <code>components/forms/_forms.scss</code>, line 94
+            </div>
+                    </div>
+        
           </section>
           <section id="kssref-forms-errors" class="kss-section kss-section--depth-2">
       <div class="kss-style">
@@ -443,8 +442,10 @@ input description.</p>
 
                   </div>
                   <button data-a11y-toggle="kss-markup-forms-errors" class="kss-markup__button">Code</button>
-          <div class="kss-markup kss-style" id="kss-markup-forms-errors">
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;c-form__item&quot;&gt;
+
+          <div id="kss-markup-forms-errors">
+                      <div class="kss-markup kss-style">
+              <pre><code class="html">&lt;div class=&quot;c-form__item&quot;&gt;
   &lt;label class=&quot;c-form__label&quot; for=&quot;text&quot;&gt;Username&lt;/label&gt;
   &lt;input type=&quot;text&quot; class=&quot;c-form__text -error&quot; id=&quot;text&quot; aria-describedby=&quot;text-error&quot;/&gt;
   &lt;div class=&quot;c-form__error&quot; id=&quot;text-error&quot; role=&quot;alert&quot;&gt;Helpful error message&lt;/div&gt;
@@ -496,11 +497,13 @@ input description.</p>
     &lt;div class=&quot;c-form__error&quot; id=&quot;text-error&quot; role=&quot;alert&quot;&gt;Helpful error message&lt;/div&gt;
 &lt;/fieldset&gt;
 </code></pre>
-          </div>
-              
-              <div class="kss-source kss-style">
-          Source: <code>components/forms/_forms.scss</code>, line 466
-        </div>
+            </div>
+          
+                      <div class="kss-source kss-style">
+              Source: <code>components/forms/_forms.scss</code>, line 464
+            </div>
+                    </div>
+        
           </section>
           <section id="kssref-forms-fieldset" class="kss-section kss-section--depth-2">
       <div class="kss-style">
@@ -561,8 +564,10 @@ common name given by the <code>&lt;legend&gt;</code> element.</p>
 
                   </div>
                   <button data-a11y-toggle="kss-markup-forms-fieldset" class="kss-markup__button">Code</button>
-          <div class="kss-markup kss-style" id="kss-markup-forms-fieldset">
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;fieldset class=&quot;c-fieldset &quot;&gt;
+
+          <div id="kss-markup-forms-fieldset">
+                      <div class="kss-markup kss-style">
+              <pre><code class="html">&lt;fieldset class=&quot;c-fieldset &quot;&gt;
   &lt;legend&gt;&lt;span class=&quot;c-fieldset__legend&quot;&gt;A fieldset&lt;/span&gt;&lt;/legend&gt;
   &lt;div class=&quot;c-fieldset__description&quot;&gt;Fieldset description&lt;/div&gt;
   &lt;div class=&quot;c-form__item&quot;&gt;
@@ -585,11 +590,13 @@ common name given by the <code>&lt;legend&gt;</code> element.</p>
   &lt;/div&gt;
 &lt;/fieldset&gt;
 </code></pre>
-          </div>
-              
-              <div class="kss-source kss-style">
-          Source: <code>components/forms/_forms.scss</code>, line 490
-        </div>
+            </div>
+          
+                      <div class="kss-source kss-style">
+              Source: <code>components/forms/_forms.scss</code>, line 488
+            </div>
+                    </div>
+        
           </section>
           <section id="kssref-forms-form-item" class="kss-section kss-section--depth-2">
       <div class="kss-style">
@@ -616,16 +623,13 @@ common name given by the <code>&lt;legend&gt;</code> element.</p>
 
               <div class="kss-modifier__wrapper">
           <div class="kss-modifier__heading kss-style">
-            Examples          </div>
+            Example          </div>
 
           <div class="kss-modifier">
-                          <code class="kss-modifier__name -default kss-style">
-                Default styling
-              </code>
             
             <div class="kss-modifier__example">
-              <div class="c-form__item [modifier class]">
-  <label class="c-form__label [modifier class]" for="form-item-input">A label for a text input <span class="c-form__required" aria-label="Required" title="Required">*</span></label>
+              <div class="c-form__item ">
+  <label class="c-form__label " for="form-item-input">A label for a text input <span class="c-form__required" aria-label="Required" title="Required">*</span></label>
   <input class="c-form__text" type="text" id="form-item-input" value="Text value">
   <div class="c-form__description">
     Form item description.
@@ -635,40 +639,26 @@ common name given by the <code>&lt;legend&gt;</code> element.</p>
             </div>
           </div>
 
-                      <div class="kss-modifier">
-              <code class="kss-modifier__name kss-style">
-                .-error
-              </code>
-              <div class="kss-modifier__description kss-style">
-                Highlight the form elements that caused a form submission error.
-              </div>
-              <div class="kss-modifier__example">
-                <div class="c-form__item -error">
-  <label class="c-form__label -error" for="form-item-input">A label for a text input <span class="c-form__required" aria-label="Required" title="Required">*</span></label>
-  <input class="c-form__text" type="text" id="form-item-input" value="Text value">
-  <div class="c-form__description">
-    Form item description.
-  </div>
-</div>
-
-              </div>
-            </div>
                   </div>
                   <button data-a11y-toggle="kss-markup-forms-form-item" class="kss-markup__button">Code</button>
-          <div class="kss-markup kss-style" id="kss-markup-forms-form-item">
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;c-form__item [modifier class]&quot;&gt;
-  &lt;label class=&quot;c-form__label [modifier class]&quot; for=&quot;form-item-input&quot;&gt;A label for a text input &lt;span class=&quot;c-form__required&quot; aria-label=&quot;Required&quot; title=&quot;Required&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+
+          <div id="kss-markup-forms-form-item">
+                      <div class="kss-markup kss-style">
+              <pre><code class="html">&lt;div class=&quot;c-form__item &quot;&gt;
+  &lt;label class=&quot;c-form__label &quot; for=&quot;form-item-input&quot;&gt;A label for a text input &lt;span class=&quot;c-form__required&quot; aria-label=&quot;Required&quot; title=&quot;Required&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
   &lt;input class=&quot;c-form__text&quot; type=&quot;text&quot; id=&quot;form-item-input&quot; value=&quot;Text value&quot;&gt;
   &lt;div class=&quot;c-form__description&quot;&gt;
     Form item description.
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-          </div>
-              
-              <div class="kss-source kss-style">
-          Source: <code>components/forms/_forms.scss</code>, line 34
-        </div>
+            </div>
+          
+                      <div class="kss-source kss-style">
+              Source: <code>components/forms/_forms.scss</code>, line 34
+            </div>
+                    </div>
+        
           </section>
           <section id="kssref-forms-form__file" class="kss-section kss-section--depth-2">
       <div class="kss-style">
@@ -707,8 +697,10 @@ common name given by the <code>&lt;legend&gt;</code> element.</p>
 
                   </div>
                   <button data-a11y-toggle="kss-markup-forms-form__file" class="kss-markup__button">Code</button>
-          <div class="kss-markup kss-style" id="kss-markup-forms-form__file">
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;c-form__item c-form__item--has-description&quot;&gt;
+
+          <div id="kss-markup-forms-form__file">
+                      <div class="kss-markup kss-style">
+              <pre><code class="html">&lt;div class=&quot;c-form__item c-form__item--has-description&quot;&gt;
   &lt;label class=&quot;c-form__label&quot; for=&quot;edit-submitted-abstract-upload&quot;&gt;Abstract&lt;/label&gt;
   &lt;div id=&quot;edit-submitted-abstract-upload&quot; class=&quot;c-form__file&quot; data-text=&quot;Ingen fil vald&quot;&gt;
     &lt;input type=&quot;file&quot; id=&quot;edit-submitted-abstract-upload&quot; name=&quot;files[submitted_abstract]&quot; size=&quot;22&quot; class=&quot;c-form__text -file&quot;&gt;
@@ -716,11 +708,13 @@ common name given by the <code>&lt;legend&gt;</code> element.</p>
   &lt;small class=&quot;c-form__description&quot; id=&quot;edit-submitted-abstract-upload-description&quot;&gt;Filer måste vara mindre än &lt;strong&gt;2 MB&lt;/strong&gt;.&lt;br&gt;Tillåtna filtyper: &lt;strong&gt;gif jpg jpeg png&lt;/strong&gt;.&lt;/small&gt;
 &lt;/div&gt;
 </code></pre>
-          </div>
-              
-              <div class="kss-source kss-style">
-          Source: <code>components/forms/_forms.scss</code>, line 196
-        </div>
+            </div>
+          
+                      <div class="kss-source kss-style">
+              Source: <code>components/forms/_forms.scss</code>, line 194
+            </div>
+                    </div>
+        
           </section>
           <section id="kssref-forms-labels" class="kss-section kss-section--depth-2">
       <div class="kss-style">
@@ -784,8 +778,10 @@ putting the form control inside the label element itself.</p>
 
                   </div>
                   <button data-a11y-toggle="kss-markup-forms-labels" class="kss-markup__button">Code</button>
-          <div class="kss-markup kss-style" id="kss-markup-forms-labels">
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;c-form__item&quot;&gt;
+
+          <div id="kss-markup-forms-labels">
+                      <div class="kss-markup kss-style">
+              <pre><code class="html">&lt;div class=&quot;c-form__item&quot;&gt;
   &lt;label class=&quot;c-form__label &quot; for=&quot;labelInputText&quot;&gt;A label for a text input &lt;span class=&quot;c-form__required&quot; aria-label=&quot;Required&quot; title=&quot;Required&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
   &lt;input class=&quot;c-form__text&quot; type=&quot;text&quot; id=&quot;labelInputText&quot; placeholder=&quot;Enter some text&quot;&gt;
 &lt;/div&gt;
@@ -810,11 +806,13 @@ putting the form control inside the label element itself.</p>
     &lt;/ul&gt;
 &lt;/fieldset&gt;
 </code></pre>
-          </div>
-              
-              <div class="kss-source kss-style">
-          Source: <code>components/forms/_forms.scss</code>, line 65
-        </div>
+            </div>
+          
+                      <div class="kss-source kss-style">
+              Source: <code>components/forms/_forms.scss</code>, line 63
+            </div>
+                    </div>
+        
           </section>
           <section id="kssref-forms-radios" class="kss-section kss-section--depth-2">
       <div class="kss-style">
@@ -870,8 +868,10 @@ is displayed as a radio button.</p>
 
                   </div>
                   <button data-a11y-toggle="kss-markup-forms-radios" class="kss-markup__button">Code</button>
-          <div class="kss-markup kss-style" id="kss-markup-forms-radios">
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;fieldset class=&quot;c-form__radios&quot;&gt;
+
+          <div id="kss-markup-forms-radios">
+                      <div class="kss-markup kss-style">
+              <pre><code class="html">&lt;fieldset class=&quot;c-form__radios&quot;&gt;
   &lt;legend&gt;&lt;span class=&quot;c-form__label&quot;&gt;Countries&lt;/span&gt;&lt;/legend&gt;
     &lt;ul class=&quot;c-form__list&quot;&gt;
       &lt;li class=&quot;c-form__item -radio&quot;&gt;
@@ -889,11 +889,13 @@ is displayed as a radio button.</p>
     &lt;/ul&gt;
 &lt;/fieldset&gt;
 </code></pre>
-          </div>
-              
-              <div class="kss-source kss-style">
-          Source: <code>components/forms/_forms.scss</code>, line 336
-        </div>
+            </div>
+          
+                      <div class="kss-source kss-style">
+              Source: <code>components/forms/_forms.scss</code>, line 334
+            </div>
+                    </div>
+        
           </section>
           <section id="kssref-forms-select" class="kss-section kss-section--depth-2">
       <div class="kss-style">
@@ -972,8 +974,10 @@ styling of <code>&lt;select&gt;</code>, unless a <code>border</code> property is
             </div>
                   </div>
                   <button data-a11y-toggle="kss-markup-forms-select" class="kss-markup__button">Code</button>
-          <div class="kss-markup kss-style" id="kss-markup-forms-select">
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;c-form__item&quot;&gt;
+
+          <div id="kss-markup-forms-select">
+                      <div class="kss-markup kss-style">
+              <pre><code class="html">&lt;div class=&quot;c-form__item&quot;&gt;
   &lt;label class=&quot;c-form__label&quot; for=&quot;selectDropdown&quot;&gt;A standard drop-down&lt;/label&gt;
   &lt;select class=&quot;c-form__select [modifier class]&quot; id=&quot;selectDropdown&quot;&gt;
     &lt;option&gt;Option 1&lt;/option&gt;
@@ -986,11 +990,13 @@ styling of <code>&lt;select&gt;</code>, unless a <code>border</code> property is
   &lt;/select&gt;
 &lt;/div&gt;
 </code></pre>
-          </div>
-              
-              <div class="kss-source kss-style">
-          Source: <code>components/forms/_forms.scss</code>, line 294
-        </div>
+            </div>
+          
+                      <div class="kss-source kss-style">
+              Source: <code>components/forms/_forms.scss</code>, line 292
+            </div>
+                    </div>
+        
           </section>
           <section id="kssref-forms-text" class="kss-section kss-section--depth-2">
       <div class="kss-style">
@@ -1052,17 +1058,21 @@ HTML5 types: <code>text</code>, <code>search</code>, <code>tel</code>, <code>url
             </div>
                   </div>
                   <button data-a11y-toggle="kss-markup-forms-text" class="kss-markup__button">Code</button>
-          <div class="kss-markup kss-style" id="kss-markup-forms-text">
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;c-form__item&quot;&gt;
+
+          <div id="kss-markup-forms-text">
+                      <div class="kss-markup kss-style">
+              <pre><code class="html">&lt;div class=&quot;c-form__item&quot;&gt;
   &lt;label class=&quot;c-form__label&quot; for=&quot;inputText&quot;&gt;Text&lt;/label&gt;
   &lt;input type=&quot;text&quot; class=&quot;c-form__text [modifier class]&quot; id=&quot;inputText&quot; placeholder=&quot;Enter some text&quot;&gt;
 &lt;/div&gt;
 </code></pre>
-          </div>
-              
-              <div class="kss-source kss-style">
-          Source: <code>components/forms/_forms.scss</code>, line 112
-        </div>
+            </div>
+          
+                      <div class="kss-source kss-style">
+              Source: <code>components/forms/_forms.scss</code>, line 110
+            </div>
+                    </div>
+        
           </section>
           <section id="kssref-forms-textarea" class="kss-section kss-section--depth-2">
       <div class="kss-style">
@@ -1122,32 +1132,30 @@ HTML5 types: <code>text</code>, <code>search</code>, <code>tel</code>, <code>url
             </div>
                   </div>
                   <button data-a11y-toggle="kss-markup-forms-textarea" class="kss-markup__button">Code</button>
-          <div class="kss-markup kss-style" id="kss-markup-forms-textarea">
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;c-form__item&quot;&gt;
+
+          <div id="kss-markup-forms-textarea">
+                      <div class="kss-markup kss-style">
+              <pre><code class="html">&lt;div class=&quot;c-form__item&quot;&gt;
   &lt;label class=&quot;c-form__label&quot; for=&quot;exampleTextarea&quot;&gt;Text area&lt;/label&gt;
   &lt;textarea class=&quot;c-form__textarea [modifier class]&quot; rows=&quot;3&quot; id=&quot;exampleTextarea&quot;&gt;&lt;/textarea&gt;
 &lt;/div&gt;
 </code></pre>
-          </div>
-              
-              <div class="kss-source kss-style">
-          Source: <code>components/forms/_forms.scss</code>, line 124
-        </div>
+            </div>
+          
+                      <div class="kss-source kss-style">
+              Source: <code>components/forms/_forms.scss</code>, line 122
+            </div>
+                    </div>
+        
           </section>
   </article>
 
 <!-- SCRIPTS -->
 <script src="kss-assets/kss.js"></script>
 <script src="kss-assets/scrollspy.js"></script>
-<script src="kss-assets/prettify.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 <script src="../../js/min/script.min.js"></script>
-<script>
-  prettyPrint();
-  var spy = new ScrollSpy('#kss-node', {
-    nav: '.kss-nav__menu-child > li > a',
-    className: 'is-in-viewport'
-  });
-</script>
 
 
 <!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->

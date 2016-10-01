@@ -26,24 +26,32 @@
   &__item {
     display: inline-block;
     margin: 0 0.2em;
+    padding-bottom: 0.2em;
 
     a {
       @include transition;
-      border-radius: pxtoem(10);
-      border: solid 1px color('grey', 'dark');
-      background-color: transparent;
+      border-radius: pxtoem(5,16);
+      border: solid 1px color('grey','light');
+      background-color: color('white');
       color: color('grey', 'dark');
       font-size: pxtoem(18);
       padding: 0.6em 1em;
       display: inline-block;
+      position: relative;
+      box-shadow: 0 3px 0 0 color('grey','light');
 
       // scss-lint:disable NestingDepth
       &:hover,
-      &:focus,
+      &:focus {
+        text-decoration: none;
+        top: 1px;
+        box-shadow: 0 2px 0 0 color('grey','light');
+      }
+
       &:active {
-        border: solid 1px color('blue');
-        background-color: color('blue');
-        color: color('white');
+        text-decoration: none;
+        top: 2px;
+        box-shadow: 0 1px 0 0 color('grey','light');
       }
       // scss-lint:enable NestingDepth
     }
@@ -54,14 +62,15 @@
         background: color('blue');
         border-color: color('blue');
         color: color('white');
+        box-shadow: 0 3px 0 0 darken(color('blue'), 10%);
 
-        &:hover,
-        &:focus,
         a:hover,
         a:focus {
-          border-color: color('blue');
-          background-color: color('blue');
-          color: color('white');
+          box-shadow: 0 2px 0 0 darken(color('blue'), 10%);
+        }
+
+        a:active {
+          box-shadow: 0 1px 0 0 darken(color('blue'), 10%);
         }
       }
       // scss-lint:enable NestingDepth

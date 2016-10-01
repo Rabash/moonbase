@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width">
 
   <link rel="stylesheet" href="kss-assets/kss.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/monokai-sublime.min.css">
   <link rel="stylesheet" href="../../css/screen.css">
 
 </head>
@@ -16,8 +17,7 @@
 
 <div class="kss-sidebar kss-style">
   <header class="kss-header">
-    <a href="index.html"><img src="../../images/png/logo.png" alt="" class="kss-logo" /></a>
-    <h1 class="kss-doc-title">Style Guide</h1>
+    <h1 class="kss-doc-title"><a href="index.html">Style Guide</a></h1>
   </header>
   <nav class="kss-nav">
     <ul class="kss-nav__menu">
@@ -78,11 +78,6 @@
         </a>
               </li>
           <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-navigation.html">
-          <span class="kss-nav__ref">10</span><span class="kss-nav__name">Menus</span>
-        </a>
-              </li>
-          <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="section-pagination.html">
           <span class="kss-nav__ref">11</span><span class="kss-nav__name">Pagination</span>
         </a>
@@ -130,25 +125,15 @@
         
               </div>
 
-      
-              <div class="kss-source kss-style">
-          Source: <code>components/promos/_promos.scss</code>, line 1
-        </div>
           </div>
   </article>
 
 <!-- SCRIPTS -->
 <script src="kss-assets/kss.js"></script>
 <script src="kss-assets/scrollspy.js"></script>
-<script src="kss-assets/prettify.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 <script src="../../js/min/script.min.js"></script>
-<script>
-  prettyPrint();
-  var spy = new ScrollSpy('#kss-node', {
-    nav: '.kss-nav__menu-child > li > a',
-    className: 'is-in-viewport'
-  });
-</script>
 
 
 <!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->

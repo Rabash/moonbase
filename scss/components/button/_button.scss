@@ -13,15 +13,13 @@
   text-decoration: none;
   font-size: pxtoem(16);
   text-align: center;
-  padding: 0.8em 1em 0.65em;
-  border-radius: 2em;
+  padding: 0.8em 1.5em 0.65em;
   border: 0;
+  border-radius: pxtoem(5,16);
   font-weight: normal;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  min-width: pxtoem(200);
   cursor: pointer;
   display: inline-block;
+  position: relative;
   box-sizing: border-box;
   margin-top: 1px; /* Make sure that border is visible everywhere. */
   margin-bottom: 1px; /* Make sure that border is visible everywhere. */
@@ -50,24 +48,25 @@
 // Style guide: button.primary
 .c-button {
   @extend %button;
-  border: solid 1px color('grey', 'dark');
-  background-color: transparent;
+  font-weight: bold;
+  border: solid 1px color('grey','light');
+  background-color: color('white');
   color: color('grey', 'dark');
+  box-shadow: 0 3px 0 0 color('grey','light');
 
   [class^="c-icon"] {
     stroke: color('grey', 'dark');
   }
 
   &:hover,
-  &:focus,
-  &:active {
-    border: solid 1px color('blue');
-    background-color: color('blue');
-    color: color('white');
+  &:focus {
+    top: 1px;
+    box-shadow: 0 2px 0 0 color('grey','light');
+  }
 
-    [class^="c-icon"] {
-      stroke: color('white');
-    }
+  &:active {
+    top: 2px;
+    box-shadow: 0 1px 0 0 color('grey','light');
   }
 }
 
@@ -80,17 +79,21 @@
 // Style guide: button.cta
 .c-button-cta {
   @extend %button;
+  font-weight: bold;
   border: solid 1px color('blue');
   background-color: color('blue');
   color: color('white');
+  box-shadow: 0 3px 0 0 darken(color('blue'), 10%);
 
   &:hover,
-  &:focus,
-  a:hover,
-  a:focus {
-    border: solid 1px color('blue');
-    background-color: color('blue');
-    color: color('white');
+  &:focus {
+    top: 1px;
+    box-shadow: 0 2px 0 0 darken(color('blue'), 10%);
+  }
+
+  &:active {
+    top: 2px;
+    box-shadow: 0 1px 0 0 darken(color('blue'), 10%);
   }
 }
 

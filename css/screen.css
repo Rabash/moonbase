@@ -402,20 +402,18 @@ blockquote {
 .c-button,
 .c-button-cta,
 .c-form__submit {
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
   text-decoration: none;
   font-size: 1em;
   text-align: center;
-  padding: 0.8em 1em 0.65em;
-  border-radius: 2em;
+  padding: 0.8em 1.5em 0.65em;
   border: 0;
+  border-radius: 0.3125em;
   font-weight: normal;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  min-width: 12.5em;
   cursor: pointer;
   display: inline-block;
+  position: relative;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -444,9 +442,12 @@ blockquote {
 }
 
 .c-button {
-  border: solid 1px #676767;
-  background-color: transparent;
+  font-weight: bold;
+  border: solid 1px #d9d9d9;
+  background-color: #fff;
   color: #676767;
+  -webkit-box-shadow: 0 3px 0 0 #d9d9d9;
+  box-shadow: 0 3px 0 0 #d9d9d9;
 }
 
 .c-button [class^="c-icon"] {
@@ -454,37 +455,43 @@ blockquote {
 }
 
 .c-button:hover,
-.c-button:focus,
-.c-button:active {
-  border: solid 1px #4484ce;
-  background-color: #4484ce;
-  color: #fff;
+.c-button:focus {
+  top: 1px;
+  -webkit-box-shadow: 0 2px 0 0 #d9d9d9;
+  box-shadow: 0 2px 0 0 #d9d9d9;
 }
 
-.c-button:hover [class^="c-icon"],
-.c-button:focus [class^="c-icon"],
-.c-button:active [class^="c-icon"] {
-  stroke: #fff;
+.c-button:active {
+  top: 2px;
+  -webkit-box-shadow: 0 1px 0 0 #d9d9d9;
+  box-shadow: 0 1px 0 0 #d9d9d9;
 }
 
 .c-button-cta {
+  font-weight: bold;
   border: solid 1px #4484ce;
   background-color: #4484ce;
   color: #fff;
+  -webkit-box-shadow: 0 3px 0 0 #2e6bb1;
+  box-shadow: 0 3px 0 0 #2e6bb1;
 }
 
 .c-button-cta:hover,
-.c-button-cta:focus,
-.c-button-cta a:hover,
-.c-button-cta a:focus {
-  border: solid 1px #4484ce;
-  background-color: #4484ce;
-  color: #fff;
+.c-button-cta:focus {
+  top: 1px;
+  -webkit-box-shadow: 0 2px 0 0 #2e6bb1;
+  box-shadow: 0 2px 0 0 #2e6bb1;
+}
+
+.c-button-cta:active {
+  top: 2px;
+  -webkit-box-shadow: 0 1px 0 0 #2e6bb1;
+  box-shadow: 0 1px 0 0 #2e6bb1;
 }
 
 .c-button-menu {
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
   -webkit-appearance: none;
   -moz-appearance: none;
   border: 0;
@@ -500,7 +507,7 @@ blockquote {
 }
 
 .c-comment {
-  background: #f9cf00;
+  background: #fff;
   padding: 2em 2.5em;
   max-width: 31.25em;
   float: left;
@@ -518,7 +525,7 @@ blockquote {
   height: 0;
   border-style: solid;
   border-width: 1.25em 1.25em 1.25em 0;
-  border-color: transparent #f9cf00 transparent transparent;
+  border-color: transparent #fff transparent transparent;
 }
 
 .c-comment:nth-child(even) {
@@ -538,10 +545,11 @@ blockquote {
   height: 0;
   border-style: solid;
   border-width: 1.25em 0 1.25em 1.25em;
-  border-color: transparent transparent transparent #f9cf00;
+  border-color: transparent transparent transparent #fff;
 }
 
 .c-comment__body {
+  color: #676767;
   font-family: Georgia, Times, "Times New Roman", serif;
   font-size: 0.875em;
   line-height: 1.65;
@@ -556,11 +564,12 @@ blockquote {
 }
 
 .c-comment__meta {
-  color: #4484ce;
+  font-size: 0.75em;
+  color: #a8a8a7;
 }
 
 .c-comment__meta a {
-  color: #4484ce;
+  color: #a8a8a7;
 }
 
 .c-search .c-form__wrapper {
@@ -626,8 +635,8 @@ blockquote {
 .c-form__password,
 .c-form__text,
 .c-form__textarea {
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
   border: 0;
   font-size: 1em;
   color: #333;
@@ -765,8 +774,8 @@ blockquote {
 }
 
 .c-form__file:after {
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
   content: attr(data-text);
   position: absolute;
   top: 0;
@@ -789,11 +798,11 @@ blockquote {
 }
 
 .c-form__file:before {
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
   font-weight: bold;
   font-size: 1em;
-  padding: 1em 1.2em 0.6em;
+  padding: 0.9em 1.2em 0.6em;
   border-radius: 0 0.3125em 0.3125em 0;
   text-decoration: none;
   display: inline-block;
@@ -851,8 +860,8 @@ blockquote {
 .c-form__select:disabled,
 .c-form__select.pseudo-class-disabled {
   background-image: none;
-  color: #d9d9d9;
-  background-color: #f4f4f4;
+  color: #a8a8a7;
+  background-color: #d9d9d9;
   top: 0;
   cursor: not-allowed;
 }
@@ -1234,8 +1243,8 @@ blockquote {
 }
 
 .c-bookmark img {
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 
 .c-bookmark:hover,
@@ -1292,41 +1301,56 @@ blockquote {
 .c-pager__item {
   display: inline-block;
   margin: 0 0.2em;
+  padding-bottom: 0.2em;
 }
 
 .c-pager__item a {
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  border-radius: 0.625em;
-  border: solid 1px #676767;
-  background-color: transparent;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  border-radius: 0.3125em;
+  border: solid 1px #d9d9d9;
+  background-color: #fff;
   color: #676767;
   font-size: 1.125em;
   padding: 0.6em 1em;
   display: inline-block;
+  position: relative;
+  -webkit-box-shadow: 0 3px 0 0 #d9d9d9;
+  box-shadow: 0 3px 0 0 #d9d9d9;
 }
 
 .c-pager__item a:hover,
-.c-pager__item a:focus,
+.c-pager__item a:focus {
+  text-decoration: none;
+  top: 1px;
+  -webkit-box-shadow: 0 2px 0 0 #d9d9d9;
+  box-shadow: 0 2px 0 0 #d9d9d9;
+}
+
 .c-pager__item a:active {
-  border: solid 1px #4484ce;
-  background-color: #4484ce;
-  color: #fff;
+  text-decoration: none;
+  top: 2px;
+  -webkit-box-shadow: 0 1px 0 0 #d9d9d9;
+  box-shadow: 0 1px 0 0 #d9d9d9;
 }
 
 .c-pager__item.-active a {
   background: #4484ce;
   border-color: #4484ce;
   color: #fff;
+  -webkit-box-shadow: 0 3px 0 0 #2e6bb1;
+  box-shadow: 0 3px 0 0 #2e6bb1;
 }
 
-.c-pager__item.-active a:hover,
-.c-pager__item.-active a:focus,
 .c-pager__item.-active a a:hover,
 .c-pager__item.-active a a:focus {
-  border-color: #4484ce;
-  background-color: #4484ce;
-  color: #fff;
+  -webkit-box-shadow: 0 2px 0 0 #2e6bb1;
+  box-shadow: 0 2px 0 0 #2e6bb1;
+}
+
+.c-pager__item.-active a a:active {
+  -webkit-box-shadow: 0 1px 0 0 #2e6bb1;
+  box-shadow: 0 1px 0 0 #2e6bb1;
 }
 
 .c-tabs {
@@ -1377,8 +1401,8 @@ blockquote {
 }
 
 .c-body a {
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
   color: #676767;
   border-bottom: solid 0.08em #4484ce;
   text-decoration: none;
@@ -1476,6 +1500,31 @@ blockquote {
   line-height: 1.65;
   max-width: 34em;
   font-style: italic;
+}
+
+.c-preamble a {
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  color: #676767;
+  border-bottom: solid 0.08em #4484ce;
+  text-decoration: none;
+}
+
+.c-preamble a:hover,
+.c-preamble a:focus,
+.c-preamble a:active {
+  color: #4484ce;
+  border-bottom-color: #4484ce;
+}
+
+.c-preamble a:visited {
+  border-bottom-color: #94618e;
+}
+
+.c-preamble a:hover:visited,
+.c-preamble a:focus:visited,
+.c-preamble a:active:visited {
+  color: #94618e;
 }
 
 /* Helper to see utility-classes /*
