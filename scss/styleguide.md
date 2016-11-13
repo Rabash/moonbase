@@ -7,6 +7,11 @@ Purpose of the style guide:
 * to create a consistent use of the style elements
 * to encourage and facilitate code reuse
 
+## This should be the canonical example
+For nearly every component of this site, this style guide should be the canonical example. This allows editors, designers, developers, and everyone else access to see how components should look and/or work.
+
+The content of this style guide is recreated every time that this project's `gulp styleguide` task runs. As more work is done, more components will be added here.
+
 ---
 
 

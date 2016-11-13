@@ -1,50 +1,50 @@
 var path        = require('path'),
-    options     = {};
+    config      = {};
 
 // #############################
-// Edit these paths and options.
+// Edit these paths and config.
 // #############################
 
 // The root paths are used to construct all the other paths in this
 // configuration.
-options.rootPath = {
+config.rootPath = {
   styleGuide    : '../docs/styleguide/',
   sassDoc       : '../docs/sassdoc/',
-theme           : '../'
+  theme           : '../'
 };
 
-options.theme = {
-  root          : options.rootPath.theme,
-  css           : options.rootPath.theme + 'css/',
-  sass          : options.rootPath.theme + 'scss/',
-  components    : options.rootPath.theme + 'components/',
-  js            : options.rootPath.theme + 'js/',
-  images        : options.rootPath.theme + 'images/'
+config.theme = {
+  root          : config.rootPath.theme,
+  css           : config.rootPath.theme + 'css/',
+  sass          : config.rootPath.theme + 'scss/',
+  components    : config.rootPath.theme + 'components/',
+  js            : config.rootPath.theme + 'js/',
+  images        : config.rootPath.theme + 'images/'
 };
 
-// Define the style guide paths and options.
-options.styleGuide = {
+// Define the style guide paths and config.
+config.styleGuide = {
   source: [
-    options.theme.sass,
-    options.theme.components
+    config.theme.sass,
+    config.theme.components
   ],
-  destination: options.rootPath.styleGuide,
+  destination: config.rootPath.styleGuide,
 
   // The css and js paths are URLs, like '/misc/jquery.js'.
   // The following paths are relative to the generated style guide.
   css: [
-    path.relative(options.rootPath.styleGuide, options.theme.css + 'screen.css')
+    path.relative(config.rootPath.styleGuide, config.theme.css + 'screen.css')
   ],
   js: [
   ],
-  builder: options.rootPath.styleGuide + 'template',
-  homepage: options.theme.sass + 'styleguide.md',
+  builder: config.rootPath.styleGuide + 'template',
+  homepage: config.theme.sass + 'styleguide.md',
   title: 'Style Guide'
 };
 
 // Define the path to the project's .scss-lint.yml.
-options.scssLint = {
-  yml: options.theme.sass + '.scss-lint.yml'
+config.scssLint = {
+  yml: config.theme.sass + '.scss-lint.yml'
 };
 
 // ################################
@@ -74,7 +74,7 @@ gulp.task('build', ['lint', 'styles:production', 'styleguide', 'sassdoc']);
 // ##########
 gulp.task('styles', function () {
   return gulp.src([
-    options.theme.sass + '*.scss'
+    config.theme.sass + '*.scss'
   ])
   .pipe(plugins.sourcemaps.init())
   .pipe(plugins.sassGlob())
@@ -84,13 +84,13 @@ gulp.task('styles', function () {
       browsers: ['> 0.05%', 'last 2 versions'],
       cascade: false
   }))
-  .pipe(plugins.sourcemaps.write(options.theme.css + 'maps'))
-  .pipe(gulp.dest(options.theme.css));
+  .pipe(plugins.sourcemaps.write(config.theme.css + 'maps'))
+  .pipe(gulp.dest(config.theme.css));
 });
 
 gulp.task('styles:production', function () {
   return gulp.src([
-    options.theme.sass + '*.scss'
+    config.theme.sass + '*.scss'
   ])
   .pipe(plugins.sassGlob())
   .pipe(plugins.sass({errLogToConsole: true}))
@@ -99,7 +99,7 @@ gulp.task('styles:production', function () {
       browsers: ['> 0.05%', 'last 2 versions'],
       cascade: false
   }))
-  .pipe(gulp.dest(options.theme.css));
+  .pipe(gulp.dest(config.theme.css));
 });
 
 // #########
@@ -107,12 +107,12 @@ gulp.task('styles:production', function () {
 // #########
 gulp.task('script', function() {
   return gulp.src([
-      options.theme.js + 'lib/*',
-      options.theme.js + 'global.js'
+      config.theme.js + 'lib/*',
+      config.theme.js + 'global.js'
     ])
     .pipe(plugins.uglify())
     .pipe(plugins.concat('script.min.js'))
-    .pipe(gulp.dest(options.theme.js + 'min'));
+    .pipe(gulp.dest(config.theme.js + 'min'));
 });
 
 // ##############
@@ -121,7 +121,7 @@ gulp.task('script', function() {
 gulp.task('sassdoc', function () {
   return gulp.src('../scss/**/*.scss')
     .pipe(sassdoc({
-      dest: options.rootPath.sassDoc
+      dest: config.rootPath.sassDoc
     }));
 });
 
@@ -129,17 +129,17 @@ gulp.task('sassdoc', function () {
 // Build style guide.
 // ##################
 gulp.task('styleguide', function() {
-  return kss(options.styleGuide);
+  return kss(config.styleGuide);
 });
 
 // Task to generate styleguide markup for colors.
 gulp.task('styleguide:color-kss-markup', function() {
-  return gulp.src(options.rootPath.styleGuide + 'template/helpers/color-kss-markup.scss')
+  return gulp.src(config.rootPath.styleGuide + 'template/helpers/color-kss-markup.scss')
     .pipe(plugins.sass({errLogToConsole: true}))
     .pipe(plugins.replace(/(\/\*|\*\/)\n/g, ''))
     .pipe(plugins.rename('color-kss-markup.twig'))
     .pipe(plugins.size({showFiles: true}))
-    .pipe(gulp.dest(options.theme.sass + 'settings'));
+    .pipe(gulp.dest(config.theme.sass + 'settings'));
 });
 
 // #########################
@@ -148,8 +148,8 @@ gulp.task('styleguide:color-kss-markup', function() {
 gulp.task('lint', ['lint:sass']);
 
 gulp.task('lint:sass', function() {
-  return gulp.src(options.theme.sass + '**/*.scss')
-    .pipe(plugins.scssLint({'config': options.scssLint.yml}));
+  return gulp.src(config.theme.sass + '**/*.scss')
+    .pipe(plugins.scssLint({'config': config.scssLint.yml}));
 });
 
 // ########################
@@ -168,7 +168,7 @@ gulp.task('styleguide:sass', function () {
 // Watch for changes and rebuild.
 // ##############################
 gulp.task('watch', function() {
-    gulp.watch(options.theme.sass + '**/*.scss', ['lint', 'styles', 'sassdoc', 'styleguide']);
+    gulp.watch(config.theme.sass + '**/*.scss', ['lint', 'styles', 'sassdoc', 'styleguide']);
 });
 
 // #####################################
@@ -176,7 +176,7 @@ gulp.task('watch', function() {
 // #####################################
 gulp.task('images', function () {
   return gulp
-    .src(options.theme.images + 'svg/*.svg')
+    .src(config.theme.images + 'svg/*.svg')
     .pipe(plugins.cheerio({
       run: function ($) {
         $('[fill]').removeAttr('fill');
@@ -189,7 +189,7 @@ gulp.task('images', function () {
         svgoPlugins: [{removeViewBox: false}]
     }))
     .pipe(plugins.svgstore())
-    .pipe(gulp.dest(options.theme.images));
+    .pipe(gulp.dest(config.theme.images));
 });
 
 // ######################
@@ -201,17 +201,17 @@ gulp.task('clean', ['clean:css', 'clean:styleguide']);
 gulp.task('clean:styleguide', function() {
   // You can use multiple globbing patterns as you would with `gulp.src`
   return del([
-      options.styleGuide.destination + '*.html',
-      options.styleGuide.destination + 'public',
-      options.theme.css + '**/*.hbs'
+      config.styleGuide.destination + '*.html',
+      config.styleGuide.destination + 'public',
+      config.theme.css + '**/*.hbs'
     ], {force: true});
 });
 
 // Clean CSS files.
 gulp.task('clean:css', function() {
   return del([
-      options.theme.root + '**/.sass-cache',
-      options.theme.css + '**/*.css',
-      options.theme.css + '**/*.map'
+      config.theme.root + '**/.sass-cache',
+      config.theme.css + '**/*.css',
+      config.theme.css + '**/*.map'
     ], {force: true});
 });
