@@ -1,33 +1,32 @@
-var path = require('path'),
-    options = {};
+var path        = require('path'),
+    options     = {};
 
 // #############################
 // Edit these paths and options.
 // #############################
 
 // The root paths are used to construct all the other paths in this
-// configuration. The "project" root path is where this gulpfile.js is located.
-// While Zen distributes this in the theme root folder, you can also put this
-// (and the package.json) in your project's root folder and edit the paths
-// accordingly.
+// configuration.
 options.rootPath = {
-  styleGuide  : '../docs/styleguide/',
-  sassDoc     : '../docs/sassdoc/',
-  theme       : '../'
+  styleGuide    : '../docs/styleguide/',
+  sassDoc       : '../docs/sassdoc/',
+theme           : '../'
 };
 
 options.theme = {
-  root    : options.rootPath.theme,
-  css     : options.rootPath.theme + 'css/',
-  sass    : options.rootPath.theme + 'scss/',
-  js      : options.rootPath.theme + 'js/',
-  images  : options.rootPath.theme + 'images/'
+  root          : options.rootPath.theme,
+  css           : options.rootPath.theme + 'css/',
+  sass          : options.rootPath.theme + 'scss/',
+  components    : options.rootPath.theme + 'components/',
+  js            : options.rootPath.theme + 'js/',
+  images        : options.rootPath.theme + 'images/'
 };
 
 // Define the style guide paths and options.
 options.styleGuide = {
   source: [
-    options.theme.sass
+    options.theme.sass,
+    options.theme.components
   ],
   destination: options.rootPath.styleGuide,
 
@@ -60,7 +59,9 @@ var gulp        = require('gulp'),
     }),
     kss         = require('kss');
 
-// Default Task
+// #############
+// Default Task.
+// #############
 gulp.task('default', ['build']);
 
 // #################
@@ -114,9 +115,9 @@ gulp.task('script', function() {
     .pipe(gulp.dest(options.theme.js + 'min'));
 });
 
-// ##################
+// ##############
 // Build sassDoc.
-// ##################
+// ##############
 gulp.task('sassdoc', function () {
   return gulp.src('../scss/**/*.scss')
     .pipe(sassdoc({
@@ -131,6 +132,7 @@ gulp.task('styleguide', function() {
   return kss(options.styleGuide);
 });
 
+// Task to generate styleguide markup for colors.
 gulp.task('styleguide:color-kss-markup', function() {
   return gulp.src(options.rootPath.styleGuide + 'template/helpers/color-kss-markup.scss')
     .pipe(plugins.sass({errLogToConsole: true}))
@@ -150,9 +152,9 @@ gulp.task('lint:sass', function() {
     .pipe(plugins.scssLint({'config': options.scssLint.yml}));
 });
 
-// #######################
-// Compile styleguide sass
-// #######################
+// ########################
+// Compile styleguide sass.
+// ########################
 gulp.task('styleguide:sass', function () {
   return gulp.src([
       '../docs/styleguide/template/kss-assets/*.scss'

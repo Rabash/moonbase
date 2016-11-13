@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Style Guide</title>
+
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="kss-assets/kss.css">
+  <link rel="stylesheet" href="../../css/screen.css">
+
+</head>
+<body id="kss-node">
+
+<div class="kss-sidebar kss-style">
+  <header class="kss-header">
+    <a href="index.html"><img src="../../images/png/logo.png" alt="" class="kss-logo" /></a>
+    <h1 class="kss-doc-title">Style Guide</h1>
+  </header>
+  <nav class="kss-nav">
+    <ul class="kss-nav__menu">
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="./">
+          <span class="kss-nav__ref">0</span
+          ><span class="kss-nav__name">Introduction</span>
+        </a>
+      </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-colors.html">
+          <span class="kss-nav__ref">1</span><span class="kss-nav__name">Colors</span>
+        </a>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-fonts.html">
+          <span class="kss-nav__ref">2</span><span class="kss-nav__name">Fonts</span>
+<<<<<<< HEAD:docs/styleguide/section-wrappers.html:docs/styleguide/section-wrappers.html
+        </a>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-articles.html">
+          <span class="kss-nav__ref">3</span><span class="kss-nav__name">Articles</span>
+=======
+>>>>>>> b261f2d9718ef72199ddfc20408ceb0858845baa:docs/styleguide/section-skip-link.html:docs/styleguide/section-skip-link.html
+        </a>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-button.html">
+          <span class="kss-nav__ref">4</span><span class="kss-nav__name">Buttons</span>
+        </a>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-comments.html">
+          <span class="kss-nav__ref">5</span><span class="kss-nav__name">Comments</span>
+        </a>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-forms.html">
+          <span class="kss-nav__ref">6</span><span class="kss-nav__name">Forms</span>
+        </a>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-grid.html">
+<<<<<<< HEAD:docs/styleguide/section-wrappers.html:docs/styleguide/section-wrappers.html
+          <span class="kss-nav__ref">7</span><span class="kss-nav__name">Grid</span>
+=======
+          <span class="kss-nav__ref">5</span><span class="kss-nav__name">Grid</span>
+>>>>>>> b261f2d9718ef72199ddfc20408ceb0858845baa:docs/styleguide/section-skip-link.html:docs/styleguide/section-skip-link.html
+        </a>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-headings.html">
+          <span class="kss-nav__ref">8</span><span class="kss-nav__name">Headings</span>
+        </a>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-links.html">
+          <span class="kss-nav__ref">9</span><span class="kss-nav__name">Links</span>
+        </a>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-navigation.html">
+          <span class="kss-nav__ref">10</span><span class="kss-nav__name">Navigation</span>
+        </a>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-pagination.html">
+          <span class="kss-nav__ref">11</span><span class="kss-nav__name">Pagination</span>
+        </a>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-promos.html">
+          <span class="kss-nav__ref">12</span><span class="kss-nav__name">Promos</span>
+        </a>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-share.html">
+          <span class="kss-nav__ref">13</span><span class="kss-nav__name">Share</span>
+        </a>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-tabs.html">
+          <span class="kss-nav__ref">14</span><span class="kss-nav__name">Tabs</span>
+        </a>
+              </li>
+          <li class="kss-nav__menu-item">
+<<<<<<< HEAD:docs/styleguide/section-wrappers.html:docs/styleguide/section-wrappers.html
+        <a class="kss-nav__menu-link" href="section-text.html">
+          <span class="kss-nav__ref">15</span><span class="kss-nav__name">Text</span>
+        </a>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-visibility.html">
+          <span class="kss-nav__ref">16</span><span class="kss-nav__name">Visibility</span>
+        </a>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-wrappers.html">
+          <span class="kss-nav__ref">17</span><span class="kss-nav__name">Wrappers</span>
+=======
+        <a class="kss-nav__menu-link" href="section-skip-link.html">
+          <span class="kss-nav__ref">9</span><span class="kss-nav__name">Skip link</span>
+        </a>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-text.html">
+          <span class="kss-nav__ref">10</span><span class="kss-nav__name">text</span>
+        </a>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-visibility.html">
+          <span class="kss-nav__ref">11</span><span class="kss-nav__name">Visibility</span>
+>>>>>>> b261f2d9718ef72199ddfc20408ceb0858845baa:docs/styleguide/section-skip-link.html:docs/styleguide/section-skip-link.html
+        </a>
+                  <ul class="kss-nav__menu-child">
+                      <li class="kss-nav__menu-item">
+              <a class="kss-nav__menu-link" href="section-wrappers.html#kssref-wrappers-blue">
+                <span class="kss-nav__ref ">17.1</span
+                ><span class="kss-nav__name">Blue wrapper</span>
+              </a>
+            </li>
+                      <li class="kss-nav__menu-item">
+              <a class="kss-nav__menu-link" href="section-wrappers.html#kssref-wrappers-light-blue">
+                <span class="kss-nav__ref ">17.2</span
+                ><span class="kss-nav__name">Light blue wrapper</span>
+              </a>
+            </li>
+                      <li class="kss-nav__menu-item">
+              <a class="kss-nav__menu-link" href="section-wrappers.html#kssref-wrappers-white">
+                <span class="kss-nav__ref ">17.3</span
+                ><span class="kss-nav__name">White wrapper</span>
+              </a>
+            </li>
+                    </ul>
+              </li>
+        </ul>
+  </nav>
+</div>
+<article role="main" class="kss-main">
+
+  
+          <div id="kssref-skip-link" class="kss-section kss-section--depth-1">
+      <div class="kss-style">
+                        <h1 class="kss-title kss-title--level-1 c-heading -a">
+          <a class="kss-title__permalink" href="#kssref-skip-link">
+            <span class="kss-title__ref">
+<<<<<<< HEAD:docs/styleguide/section-wrappers.html:docs/styleguide/section-wrappers.html
+              Section 17
+=======
+              Section 9
+>>>>>>> b261f2d9718ef72199ddfc20408ceb0858845baa:docs/styleguide/section-skip-link.html:docs/styleguide/section-skip-link.html
+              <span class="kss-title__permalink-hash">
+                skip-link
+              </span>
+            </span>
+<<<<<<< HEAD:docs/styleguide/section-wrappers.html:docs/styleguide/section-wrappers.html
+            Wrappers
+          </a>
+        </h1>
+
+        
+              </div>
+=======
+            Skip link
+          </a>
+        </h1>
+
+                  <div class="kss-description c-body">
+            <div class="c-body__preamble">
+              <p>To make the link completely hidden until a user tabs to the link, combine it
+with the <code>u-visually-hidden</code> component.</p>
+>>>>>>> b261f2d9718ef72199ddfc20408ceb0858845baa:docs/styleguide/section-skip-link.html:docs/styleguide/section-skip-link.html
+
+      
+              <div class="kss-source kss-style">
+          Source: <code>components/wrappers/_wrappers.scss</code>, line 1
+        </div>
+          </div>
+          <section id="kssref-wrappers-blue" class="kss-section kss-section--depth-2">
+      <div class="kss-style">
+                        <h2 class="kss-title kss-title--level-2 c-heading -b">
+          <a class="kss-title__permalink" href="#kssref-wrappers-blue">
+            <span class="kss-title__ref">
+              Section 17.1
+              <span class="kss-title__permalink-hash">
+                wrappers.blue
+              </span>
+            </span>
+            Blue wrapper
+          </a>
+        </h2>
+
+        
+              </div>
+
+              <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example          </div>
+
+          <div class="kss-modifier">
+            
+            <div class="kss-modifier__example">
+              <div class="c-blue">A light blue wrapper</div>
+            </div>
+          </div>
+
+                  </div>
+                  <button data-a11y-toggle="kss-markup-wrappers-blue" class="kss-markup__button">Code</button>
+          <div class="kss-markup kss-style" id="kss-markup-wrappers-blue">
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;c-blue&quot;&gt;A light blue wrapper&lt;/div&gt;</code></pre>
+          </div>
+              
+              <div class="kss-source kss-style">
+          Source: <code>components/wrappers/_wrappers.scss</code>, line 32
+        </div>
+          </section>
+          <section id="kssref-wrappers-light-blue" class="kss-section kss-section--depth-2">
+      <div class="kss-style">
+                        <h2 class="kss-title kss-title--level-2 c-heading -b">
+          <a class="kss-title__permalink" href="#kssref-wrappers-light-blue">
+            <span class="kss-title__ref">
+              Section 17.2
+              <span class="kss-title__permalink-hash">
+                wrappers.light-blue
+              </span>
+            </span>
+            Light blue wrapper
+          </a>
+        </h2>
+
+        
+              </div>
+
+              <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Examples          </div>
+
+          <div class="kss-modifier">
+                          <code class="kss-modifier__name -default kss-style">
+                Default styling
+              </code>
+            
+            <div class="kss-modifier__example">
+<<<<<<< HEAD:docs/styleguide/section-wrappers.html:docs/styleguide/section-wrappers.html
+              <div class="c-light-blue">A light blue wrapper</div>
+=======
+              <a href="#main-content" class="c-skip-link [modifier class]">Jump to navigation</a>
+
+>>>>>>> b261f2d9718ef72199ddfc20408ceb0858845baa:docs/styleguide/section-skip-link.html:docs/styleguide/section-skip-link.html
+            </div>
+          </div>
+
+                      <div class="kss-modifier">
+              <code class="kss-modifier__name kss-style">
+                :focus
+              </code>
+              <div class="kss-modifier__description kss-style">
+                Focus styling.
+              </div>
+              <div class="kss-modifier__example">
+                <a href="#main-content" class="c-skip-link pseudo-class-focus">Jump to navigation</a>
+
+              </div>
+            </div>
+                  </div>
+<<<<<<< HEAD:docs/styleguide/section-wrappers.html:docs/styleguide/section-wrappers.html
+                  <button data-a11y-toggle="kss-markup-wrappers-light-blue" class="kss-markup__button">Code</button>
+          <div class="kss-markup kss-style" id="kss-markup-wrappers-light-blue">
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;c-light-blue&quot;&gt;A light blue wrapper&lt;/div&gt;</code></pre>
+          </div>
+              
+              <div class="kss-source kss-style">
+          Source: <code>components/wrappers/_wrappers.scss</code>, line 6
+=======
+                  <button data-a11y-toggle="kss-markup-skip-link" class="kss-markup__button">Code</button>
+          <div class="kss-markup kss-style" id="kss-markup-skip-link">
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;a href=&quot;#main-content&quot; class=&quot;c-skip-link [modifier class]&quot;&gt;Jump to navigation&lt;/a&gt;
+</code></pre>
+          </div>
+              
+              <div class="kss-source kss-style">
+          Source: <code>skip-link/_skip-link.scss</code>, line 1
+>>>>>>> b261f2d9718ef72199ddfc20408ceb0858845baa:docs/styleguide/section-skip-link.html:docs/styleguide/section-skip-link.html
+        </div>
+          </section>
+          <section id="kssref-wrappers-white" class="kss-section kss-section--depth-2">
+      <div class="kss-style">
+                        <h2 class="kss-title kss-title--level-2 c-heading -b">
+          <a class="kss-title__permalink" href="#kssref-wrappers-white">
+            <span class="kss-title__ref">
+              Section 17.3
+              <span class="kss-title__permalink-hash">
+                wrappers.white
+              </span>
+            </span>
+            White wrapper
+          </a>
+        </h2>
+
+        
+              </div>
+
+              <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example          </div>
+
+          <div class="kss-modifier">
+            
+            <div class="kss-modifier__example">
+              <div class="c-white">A white wrapper</div>
+            </div>
+          </div>
+
+                  </div>
+                  <button data-a11y-toggle="kss-markup-wrappers-white" class="kss-markup__button">Code</button>
+          <div class="kss-markup kss-style" id="kss-markup-wrappers-white">
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;c-white&quot;&gt;A white wrapper&lt;/div&gt;</code></pre>
+          </div>
+              
+              <div class="kss-source kss-style">
+          Source: <code>components/wrappers/_wrappers.scss</code>, line 22
+        </div>
+          </section>
+  </article>
+
+<!-- SCRIPTS -->
+<script src="kss-assets/kss.js"></script>
+<<<<<<< HEAD:docs/styleguide/section-wrappers.html:docs/styleguide/section-wrappers.html
+=======
+<script src="kss-assets/responsive-nav.js"></script>
+>>>>>>> b261f2d9718ef72199ddfc20408ceb0858845baa:docs/styleguide/section-skip-link.html:docs/styleguide/section-skip-link.html
+<script src="kss-assets/scrollspy.js"></script>
+<script src="kss-assets/prettify.js"></script>
+<script src="../../js/min/script.min.js"></script>
+<script>
+  prettyPrint();
+  var spy = new ScrollSpy('#kss-node', {
+    nav: '.kss-nav__menu-child > li > a',
+    className: 'is-in-viewport'
+  });
+</script>
+<script src="../../js/min/script.min.js"></script>
+
+
+<!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
+</body>
+</html>

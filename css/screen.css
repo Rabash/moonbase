@@ -37,7 +37,6 @@ body {
 
 html {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -45,7 +44,6 @@ html {
 *:before,
 *:after {
   -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
   box-sizing: inherit;
 }
 
@@ -147,7 +145,6 @@ input {
 
 input[type="search"] {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-appearance: textfield;
 }
@@ -191,7 +188,6 @@ input[type="radio"] {
   margin: 4px 0 0;
   line-height: normal;
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -220,7 +216,6 @@ a {
 hr {
   height: 0;
   -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
 
@@ -348,7 +343,6 @@ blockquote {
 [class^="o-"],
 [class*=" o-"] {
   -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
 
@@ -379,7 +373,6 @@ blockquote {
 
 .o-wrapper {
   -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   max-width: 80.125em;
   position: relative;
@@ -390,7 +383,6 @@ blockquote {
 .o-wrapper.-masonry {
   overflow: hidden;
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -415,7 +407,6 @@ blockquote {
   display: inline-block;
   position: relative;
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin-top: 1px;
   /* Make sure that border is visible everywhere. */
@@ -647,7 +638,6 @@ blockquote {
   -webkit-box-shadow: 0 0 0 1px #a8a8a7;
   box-shadow: 0 0 0 1px #a8a8a7;
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: calc(100% - 2px);
   margin: 1px;
@@ -2117,7 +2107,6 @@ blockquote {
 
   .o-wrapper\@xlarge {
     -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
     box-sizing: content-box;
     max-width: 80.125em;
     margin-right: auto;
@@ -2306,4 +2295,3 @@ blockquote {
     display: none;
   }
 }
-/*# sourceMappingURL=../css/maps/screen.css.map */
