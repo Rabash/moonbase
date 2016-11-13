@@ -1,6 +1,8 @@
 {
-  "styleguide": true,
-  "classes": " card-promo ",
-  "label": "This is the card title",
-  "body": "<p>JSON Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam atque doloremque eligendi, fugiat fugit laudantium mollitia obcaecati perspiciatis quasi rem rerum saepe sint voluptate? Ab dicta eius harum magnam praesentium.</p>"
+  "title": "Latest comments",
+  "delta": 1,
+  "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam atque doloremque eligendi, fugiat fugit laudantium mollitia obcaecati perspiciatis quasi rem rerum saepe sint voluptate? Ab dicta eius harum magnam praesentium.</p>",
+  "author": "Anna Aurora",
+  "date": "31 august 2016, 16:50",
+  "datetime": "2016-08-31T16:50+00:00"
 }

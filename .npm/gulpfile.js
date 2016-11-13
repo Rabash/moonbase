@@ -33,9 +33,12 @@ config.styleGuide = {
   // The css and js paths are URLs, like '/misc/jquery.js'.
   // The following paths are relative to the generated style guide.
   css: [
-    path.relative(config.rootPath.styleGuide, config.theme.css + 'screen.css')
+    path.relative(config.rootPath.styleGuide, config.theme.css + 'screen.css'),
+    path.relative(config.rootPath.styleGuide, config.theme.css + 'styleguide.css')
   ],
   js: [
+    path.relative(config.rootPath.styleGuide, config.theme.js + 'min/styleguide.min.js'),
+    path.relative(config.rootPath.styleGuide, config.theme.js + 'min/script.min.js')
   ],
   builder: config.rootPath.styleGuide + 'template',
   homepage: config.theme.sass + 'styleguide.md',
@@ -67,7 +70,7 @@ gulp.task('default', ['build']);
 // #################
 // Build everything.
 // #################
-gulp.task('build', ['lint', 'styles:production', 'styleguide', 'sassdoc']);
+gulp.task('build', ['lint', 'styles:production', 'styleguide', 'sassdoc', 'images', 'script']);
 
 // ##########
 // Build CSS.
@@ -115,6 +118,15 @@ gulp.task('script', function() {
     .pipe(gulp.dest(config.theme.js + 'min'));
 });
 
+gulp.task('script:styleguide', function() {
+  return gulp.src([
+      config.theme.js + 'styleguide/*'
+    ])
+    .pipe(plugins.uglify())
+    .pipe(plugins.concat('styleguide.min.js'))
+    .pipe(gulp.dest(config.theme.js + 'min'));
+});
+
 // ##############
 // Build sassDoc.
 // ##############
@@ -150,18 +162,6 @@ gulp.task('lint', ['lint:sass']);
 gulp.task('lint:sass', function() {
   return gulp.src(config.theme.sass + '**/*.scss')
     .pipe(plugins.scssLint({'config': config.scssLint.yml}));
-});
-
-// ########################
-// Compile styleguide sass.
-// ########################
-gulp.task('styleguide:sass', function () {
-  return gulp.src([
-      '../docs/styleguide/template/kss-assets/*.scss'
-    ])
-    .pipe(plugins.sassGlob())
-    .pipe(plugins.sass({errLogToConsole: true}))
-    .pipe(gulp.dest('../docs/styleguide/template/kss-assets/'));
 });
 
 // ##############################

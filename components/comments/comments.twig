@@ -3,38 +3,11 @@
     <div class="o-faux-row o-9-12@large u-center@large">
 
     <h2 class="c-heading-b -line"><svg class="c-icon-comment"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/themes/custom/client/images/svg.svg#icon--comment"></use></svg>
-      Latest comments</h2>
+      {{ title }}</h2>
       <ol class="o-row c-comment-list">
-        <li class="c-comment" id="comment-2">
-          <div class="c-comment__body">
-            {% if body %}
-              {{ body }}
-            {% endif %}
-          </div>
-          <div class="c-comment__meta">
-            <a href="#comment-2">Mikael Holmbom, <time class="comment-meta-item" datetime="2016-08-31T16:49+00:00">31 augusti 2016, 16:49</time></a>
-          </div>
-        </li>
-        <li class="c-comment" id="comment-3">
-          <div class="c-comment__body">
-            {% if body %}
-              {{ body }}
-            {% endif %}
-          </div>
-          <div class="c-comment__meta">
-            <a href="#comment-3">Mikael Holmbom, <time class="comment-meta-item" datetime="2016-08-31T16:50+00:00">31 augusti 2016, 16:50</time></a>
-          </div>
-        </li>
-        <li class="c-comment" id="comment-4">
-          <div class="c-comment__body">
-            {% if body %}
-              {{ body }}
-            {% endif %}
-          </div>
-          <div class="c-comment__meta">
-            <a href="#comment-4">Mikael Holmbom, <time class="comment-meta-item" datetime="2016-08-31T17:57+00:00">31 augusti 2016, 17:57</time></a>
-          </div>
-        </li>
+        {% include 'comment.twig' %}
+        {% include 'comment.twig' %}
+        {% include 'comment.twig' %}
       </ol>
     </div>
   </div>

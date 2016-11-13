@@ -1,17 +1,6 @@
-// Import settings from client theme
-@import '../../../../scss/settings/global';
-@import '../../../../scss/settings/breakpoints';
-@import '../../../../scss/settings/colors';
-@import '../../../../scss/settings/fonts';
-@import '../../../../scss/settings/grid';
-@import '../../../../scss/settings/z-layers';
-
-// Import tools from client theme
-@import '../../../../scss/tools/functions';
-@import '../../../../scss/tools/mixins';
-@import '../../../../scss/tools/helpers';
-
 // KSS styles start here
+//
+// All styles are prefixed by `kss-` to not interfere with other styles.
 html {
   position: relative;
 }
@@ -83,12 +72,14 @@ html {
       display: block;
     }
 
+    // scss-lint:disable NestingDepth
     .kss-nav__menu-item {
       .kss-nav__menu-link {
         padding-left: 1.8em;
         border-left: 6px solid darken(color('white'), 8%);
       }
     }
+    // scss-lint:enable NestingDepth
   }
 
   &-item {
@@ -307,6 +298,8 @@ html {
   stroke: #666;
 }
 
+// scss-lint:disable ImportantRule
 .c-body p:last-child {
   margin-bottom: 1.6em !important;
 }
+// scss-lint:enable ImportantRule
