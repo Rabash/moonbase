@@ -17,7 +17,6 @@ config.theme = {
   root          : config.rootPath.theme,
   css           : config.rootPath.theme + 'css/',
   sass          : config.rootPath.theme + 'scss/',
-  components    : config.rootPath.theme + 'components/',
   js            : config.rootPath.theme + 'js/',
   images        : config.rootPath.theme + 'images/'
 };
@@ -25,8 +24,7 @@ config.theme = {
 // Define the style guide paths and config.
 config.styleGuide = {
   source: [
-    config.theme.sass,
-    config.theme.components
+    config.theme.sass
   ],
   destination: config.rootPath.styleGuide,
 

@@ -6,7 +6,7 @@
 .c-message {
   padding: 1em 2em 1em 4em;
   color: color('black');
-  background-color: lighten( color('green'), 30% );
+  background-color: lighten(color('green'), 30%);
   border: 2px solid color('green');
   background-image: url('../images/svg/icon-status.svg');
   background-repeat: no-repeat;
@@ -26,13 +26,13 @@
   }
 
   &.-warning {
-    background-color: lighten( color('yellow'), 40% );
+    background-color: lighten(color('yellow'), 40%);
     border-color: color('yellow');
     background-image: url('../images/svg/icon-warning.svg');
   }
 
   &.-error {
-    background-color: lighten( color('red'), 50% );
+    background-color: lighten(color('red'), 50%);
     border-color: color('red');
     background-image: url('../images/svg/icon-error.svg');
   }
