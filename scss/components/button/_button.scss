@@ -36,6 +36,7 @@
   }
 }
 
+
 // Button
 //
 // Primary buttons.
@@ -54,9 +55,10 @@
   color: color('grey', 'dark');
   box-shadow: 0 3px 0 0 color('grey','light');
 
-  [class^="c-icon"] {
+  [class^='c-icon'] {
     stroke: color('grey', 'dark');
   }
+
 
   &:hover,
   &:focus {
@@ -100,7 +102,7 @@
 .c-button-menu {
   @include transition;
   -webkit-appearance: none;
-  -moz-appearance: none;
+     -moz-appearance: none;
   border: 0;
   padding: 0.4em 0.5em;
   background: color('blue');
